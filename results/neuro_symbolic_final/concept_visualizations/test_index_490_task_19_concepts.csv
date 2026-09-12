@@ -1,0 +1,13 @@
+predicate,probability,active
+has_red,0.9985939860343933,True
+has_circle,0.9308176636695862,True
+has_green,0.8346514105796814,True
+exists_circle_before_last,0.8298519849777222,True
+has_square,0.7507069110870361,True
+tower_structure,0.72699373960495,True
+has_yellow,0.7195340991020203,True
+traffic_light_structure,0.4114823043346405,False
+house_structure,0.24941830337047577,False
+palindrome_sequence,0.1951664388179779,False
+has_cyan,0.18771547079086304,False
+has_magenta,0.17667372524738312,False

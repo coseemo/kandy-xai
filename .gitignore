@@ -3,3 +3,9 @@ data/
 .ipynb_checkpoints/
 __pycache__/
 wandb/
+
+# Checkpoint ResNet originali: vengono mantenuti solo nel backup locale
+results/cnn_benchmark/checkpoints/
+
+# Backup locale dei checkpoint
+# (questa cartella è fuori dal repository, ma la lasciamo documentata)

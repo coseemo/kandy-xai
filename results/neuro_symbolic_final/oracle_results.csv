@@ -1,0 +1,21 @@
+task_id,task_name,accuracy,f1
+0,triangle vs any,1.0,1.0
+1,square vs any,1.0,1.0
+2,circle vs any,1.0,1.0
+3,red vs any,1.0,1.0
+4,green vs any,1.0,1.0
+5,blue vs any,1.0,1.0
+6,cyan vs any,1.0,1.0
+7,magenta vs any,1.0,1.0
+8,yellow vs any,1.0,1.0
+9,red triangle on the right,1.0,1.0
+10,red triangle on the right and arbitrary objects,1.0,1.0
+11,red triangle on the right and at least one circle and arbitrary objects,1.0,1.0
+12,red triangle on the right and at least one blue object and arbitrary objects,1.0,1.0
+13,"triangle and square, same color",1.0,1.0
+14,palindrome aba,1.0,1.0
+15,house,1.0,1.0
+16,car,1.0,1.0
+17,tower,1.0,1.0
+18,wagon,1.0,1.0
+19,traffic light,1.0,1.0

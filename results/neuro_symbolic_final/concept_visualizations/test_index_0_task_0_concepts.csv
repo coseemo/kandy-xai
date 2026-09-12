@@ -1,0 +1,13 @@
+predicate,probability,active
+has_blue,0.9872310757637024,True
+has_triangle,0.8167057633399963,True
+has_square,0.7037662267684937,True
+exists_blue_before_last,0.6791204214096069,True
+palindrome_sequence,0.615639865398407,True
+house_structure,0.547254741191864,True
+last_is_red_triangle,0.3700137734413147,False
+triangle_square_same_color,0.30483606457710266,False
+has_green,0.15903867781162262,False
+has_cyan,0.06322114914655685,False
+wagon_structure,0.049421776086091995,False
+has_red,0.048575881868600845,False
