@@ -1,4 +1,4 @@
-# KANDY Easy — analisi di modelli interpretabili, CNN e ragionamento sui concetti
+# Laboratorio Explainable AI
 
 ## 1. Obiettivo del progetto
 
@@ -9,7 +9,7 @@ L'idea di fondo è confrontare:
 - una pipeline basata su **feature visive costruite direttamente dalle immagini** e modelli classici interpretabili;
 - una **CNN ResNet-18** usata come modello di riferimento;
 - un'analisi delle decisioni della CNN tramite **mappe di salienza, SHAP**;
-- un modello **neuro-simbolico basato su predicati semantici**, in cui l'immagine viene trasformata in un insieme di concetti e questi concetti vengono poi combinati attraverso regole simboliche.
+- un **Concept Bottleneck Model** (CBM) neuro-simbolico , in cui l'immagine viene trasformata in un insieme di concetti e questi concetti vengono poi combinati attraverso regole simboliche.
 
 Il progetto non vuole soltanto massimizzare l'accuratezza. L'obiettivo è capire **quali informazioni vengono utilizzate dal modello**, quanto queste informazioni sono interpretabili e dove l'interpretabilità diventa più difficile quando il compito richiede strutture composte.
 
@@ -48,7 +48,7 @@ Dalle immagini vengono estratte feature relative a:
 - vicinanza;
 - uguaglianza di forma, colore e dimensione.
 
-La parte di visione artificiale è volutamente semplice e trasparente: l'obiettivo non è costruire un detector generico, ma ottenere una rappresentazione che permetta di studiare direttamente il comportamento dei modelli interpretabili.
+La parte di visione artificiale è volutamente semplice e trasparente: l'obiettivo non è costruire un detector generico, ma ottenere una rappresentazione che permetta di studiare direttamente il comportamento dei modelli interpretabili. In particolare, la pipeline segmenta l'immagine separatamente per colore, individua le componenti connesse e descrive ogni oggetto tramite area, posizione, extent e circularity, usati per stimare forma, colore e dimensione. Le feature finali vengono poi costruite a partire dagli oggetti rilevati e dalle loro relazioni geometriche generiche. Tutte le regole e le soglie sono definite esplicitamente nel codice, quindi la procedura è riproducibile e facilmente ispezionabile, mentre i valori delle soglie possono essere modificati o ri-tarati nel caso si lavori con immagini o dataset diversi.
 
 > **Nota sullo sviluppo:** nella progettazione e nel controllo della parte di classificazione geometrica delle forme è stato utilizzato anche ChatGPT come supporto. Le feature finali e la pipeline usata negli esperimenti restano comunque esplicite e ispezionabili nel codice.
 
@@ -92,19 +92,13 @@ Per esempio, nel task del semaforo l'albero trovato è molto compatto e utilizza
 
 Questa figura è interessante anche per un altro motivo: la regola originale del task semaforo richiede una struttura ordinata di tre cerchi, mentre l'albero usa alcune proprietà generiche che separano bene i campioni disponibili. Quindi la trasparenza del modello non significa automaticamente che la regola appresa coincida con la struttura semantica originale del problema.
 
-[![Decision Tree - Task 19](results/interpretable_models/plots/task_19_decision_tree.png)](results/interpretable_models/plots/task_19_decision_tree.png)
-
-[Apri direttamente l'immagine in alta risoluzione](results/interpretable_models/plots/task_19_decision_tree.png)
-
-**Dove mettere l'immagine:** mantenere il file nella cartella `results/interpretable_models/plots/`, come mostrato sopra. Lo stesso schema viene usato per gli altri task.
+[![Decision Tree - Task 13](results/interpretable_models/plots/task_19_decision_tree.png)](results/interpretable_models/plots/task_13_decision_tree.png)
 
 ### Confronto tra i tre modelli
 
 Per avere una visione sintetica vengono salvate anche figure che mettono a confronto Logistic Regression, Decision Tree ed EBM.
 
 [![Confronto modelli interpretabili - Task 19](results/interpretable_models/plots/task_19_interpretable_models_summary.png)](results/interpretable_models/plots/task_19_interpretable_models_summary.png)
-
-[Apri direttamente l'immagine in alta risoluzione](results/interpretable_models/plots/task_19_interpretable_models_summary.png)
 
 La differenza visiva tra i tre approcci è significativa:
 
@@ -133,23 +127,17 @@ Queste curve permettono di vedere non solo che una variabile è importante, ma *
 
 [![EBM - posizione media del quadrato](results/interpretable_models/plots/task_0_ebm_mean_x_square.png)](results/interpretable_models/plots/task_0_ebm_mean_x_square.png)
 
-[Apri il grafico EBM](results/interpretable_models/plots/task_0_ebm_mean_x_square.png)
-
 In questo grafico il contributo non è costante: alcune posizioni spingono la decisione verso la classe positiva, mentre altre la spingono verso la negativa. Questo è un tipo di informazione che non sarebbe visibile guardando soltanto una feature importance.
 
 ### Esempio: conteggio dei cerchi nel task semaforo
 
 [![EBM - numero di cerchi](results/interpretable_models/plots/task_19_ebm_count_shape_circle.png)](results/interpretable_models/plots/task_19_ebm_count_shape_circle.png)
 
-[Apri il grafico EBM](results/interpretable_models/plots/task_19_ebm_count_shape_circle.png)
-
 Qui si nota una relazione molto più intuitiva: avere zero cerchi porta un contributo negativo, mentre la presenza di uno o più cerchi sposta il contributo nella direzione positiva. La curva non descrive da sola tutta la regola del task, ma mostra bene **una componente della decisione**.
 
 ### Esempio: presenza di giallo nel task "house"
 
 [![EBM - conteggio del giallo](results/interpretable_models/plots/task_15_ebm_count_color_yellow.png)](results/interpretable_models/plots/task_15_ebm_count_color_yellow.png)
-
-[Apri il grafico EBM](results/interpretable_models/plots/task_15_ebm_count_color_yellow.png)
 
 La curva cresce al crescere del numero di elementi gialli. Anche in questo caso l'EBM rende visibile la relazione appresa invece di ridurla a un singolo numero.
 
@@ -203,15 +191,11 @@ Un caso semplice è il task del triangolo:
 
 [![Salienza - triangolo](results/shap/saliency/task_00_pretrained_TP_0003.png)](results/shap/saliency/task_00_pretrained_TP_0003.png)
 
-[Apri la mappa di salienza](results/shap/saliency/task_00_pretrained_TP_0003.png)
-
 Qui l'attenzione è concentrata soprattutto sulla regione che contiene l'oggetto. Questo comportamento è coerente con il fatto che il task può essere deciso osservando direttamente la presenza della forma.
 
 Nel task semaforo si osserva invece una regione di attivazione distribuita lungo la struttura verticale:
 
 [![Salienza - semaforo](results/shap/saliency/task_19_pretrained_TP_0022.png)](results/shap/saliency/task_19_pretrained_TP_0022.png)
-
-[Apri la mappa di salienza](results/shap/saliency/task_19_pretrained_TP_0022.png)
 
 Questo è un esempio interessante perché la rete non evidenzia soltanto un singolo oggetto isolato, ma una zona che comprende la sequenza dei tre elementi.
 
@@ -279,13 +263,9 @@ Per rendere visibile questa rappresentazione intermedia, il notebook salva alcun
 
 [![Esempio CBM - test index 0](results/neuro_symbolic_final/concept_visualizations/test_index_0_task_0_concepts.png)](results/neuro_symbolic_final/concept_visualizations/test_index_0_task_0_concepts.png)
 
-[Apri la visualizzazione dei concetti - esempio 1](results/neuro_symbolic_final/concept_visualizations/test_index_0_task_0_concepts.png)
-
 [![Esempio CBM - test index 490](results/neuro_symbolic_final/concept_visualizations/test_index_490_task_19_concepts.png)](results/neuro_symbolic_final/concept_visualizations/test_index_490_task_19_concepts.png)
 
-[Apri la visualizzazione dei concetti - esempio 2](results/neuro_symbolic_final/concept_visualizations/test_index_490_task_19_concepts.png)
-
-Queste immagini mostrano concretamente il passaggio dall'immagine alla rappresentazione concettuale, permettendo di vedere quali concetti il modello considera più attivi prima della decisione finale.
+Queste immagini mostrano concretamente il passaggio dall'immagine alla rappresentazione concettuale, permettendo di vedere quali concetti il modello considera più attivi prima della decisione finale. Tali esempi mostrano che il CBM produce una rappresentazione semantica interpretabile ma non necessariamente corretta: nel caso del triangolo blu, oltre a `has_triangle=0.82` e `has_blue=0.99`, il modello predice anche `has_square=0.70`, mostrando un errore nella fase di riconoscimento dei concetti che può propagarsi alla decisione finale.
 
 
 ---
