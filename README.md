@@ -92,7 +92,7 @@ Per esempio, nel task del semaforo l'albero trovato è molto compatto e utilizza
 
 Questa figura è interessante anche per un altro motivo: la regola originale del task semaforo richiede una struttura ordinata di tre cerchi, mentre l'albero usa alcune proprietà generiche che separano bene i campioni disponibili. Quindi la trasparenza del modello non significa automaticamente che la regola appresa coincida con la struttura semantica originale del problema.
 
-[![Decision Tree - Task 13](results/interpretable_models/plots/task_19_decision_tree.png)](results/interpretable_models/plots/task_13_decision_tree.png)
+[![Decision Tree - Task 13](results/interpretable_models/plots/task_13_decision_tree.png)](results/interpretable_models/plots/task_13_decision_tree.png)
 
 ### Confronto tra i tre modelli
 
