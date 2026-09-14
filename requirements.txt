@@ -3,8 +3,14 @@ pandas
 matplotlib
 seaborn
 pillow
+scipy
+scikit-learn
+interpret
+
+torch
+torchvision
+shap
 
 jupyter
 ipykernel
-
 pyyaml
