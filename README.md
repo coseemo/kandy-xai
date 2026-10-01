@@ -701,7 +701,7 @@ Per ogni immagine viene utilizzato il logit prodotto dalla testa associata al re
 Inoltre, abbiamo visto che i task possono avere un numero diverso di esempi positivi e negativi, per tenere conto di questo sbilanciamento usiamo un pos_weight specifico per ogni task, calcolato come:
 
 $$
-\texttt{pos\_weight} = \frac{N_{\text{negativi}}}{N_{\text{positivi}}}
+\mathrm{pos\_weight} = \frac{N_{\mathrm{negativi}}}{N_{\mathrm{positivi}}}
 $$
 
 Questo peso viene applicato alla parte della binary cross-entropy relativa alla classe positiva: quando i positivi sono pochi, le loro predizioni sbagliate incidono maggiormente sulla loss; in questo modo evitiamo che un task con pochi esempi positivi venga ottimizzato solo sulla classe negativa.
