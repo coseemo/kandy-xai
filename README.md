@@ -701,7 +701,7 @@ Per ogni immagine viene utilizzato il logit prodotto dalla testa associata al re
 Inoltre, abbiamo visto che i task possono avere un numero diverso di esempi positivi e negativi, per tenere conto di questo sbilanciamento usiamo un pos_weight specifico per ogni task, calcolato come:
 
 $$
-\text{pos\_weight} = \frac{N_{\text{negativi}}}{N_{\text{positivi}}}
+\texttt{pos\_weight} = \frac{N_{\text{negativi}}}{N_{\text{positivi}}}
 $$
 
 Questo peso viene applicato alla parte della binary cross-entropy relativa alla classe positiva: quando i positivi sono pochi, le loro predizioni sbagliate incidono maggiormente sulla loss; in questo modo evitiamo che un task con pochi esempi positivi venga ottimizzato solo sulla classe negativa.
@@ -1262,9 +1262,9 @@ Passiamo dunque alla loss utilizzata.
 
 Durante l'addestramento andiamo a utilizzare una loss composta da due contributi: una BCEWithLogitsLoss sui 37 concetti e una binary cross-entropy sulla predizione del task: la concept loss utilizza un pos_weight specifico per ogni concetto, maggiore per i concetti più rari, mentre la task loss usa un peso diverso per ciascun task in funzione del rapporto tra esempi negativi e positivi. La loss finale è quindi:
 
-[
-\mathcal{L} = \mathcal{L}{concept} + 0.25 \cdot \mathcal{L}{task}
-]
+$$
+\mathcal{L} = \mathcal{L}_{\text{concept}} + 0.25 \cdot \mathcal{L}_{\text{task}}
+$$
 
 in modo da mantenere come obiettivo principale l'apprendimento di una rappresentazione interpretabile senza trascurare la classificazione dei task.
 
