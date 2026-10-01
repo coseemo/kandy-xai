@@ -1,0 +1,178 @@
+seed: 12345
+#imposto il seed per riproducibilità
+
+task_count: 20
+
+task_names:
+#nomi dei task
+
+  0: "triangle vs any"
+  1: "square vs any"
+  2: "circle vs any"
+  3: "red vs any"
+  4: "green vs any"
+  5: "blue vs any"
+  6: "cyan vs any"
+  7: "magenta vs any"
+  8: "yellow vs any"
+  9: "red triangle on the right"
+  10: "red triangle on the right and arbitrary objects"
+  11: "red triangle on the right and at least one circle and arbitrary objects"
+  12: "red triangle on the right and at least one blue object and arbitrary objects"
+  13: "triangle and square, same color"
+  14: "palindrome aba"
+  15: "house"
+  16: "car"
+  17: "tower"
+  18: "wagon"
+  19: "traffic light"
+  
+paths:
+#cpercorsi cartelle
+
+  data_dir: "data/samples/sets"
+  
+  results_dir: "results/visual_models"
+  checkpoints_dir: "results/visual_models/checkpoints"
+  histories_dir: "results/visual_models/histories"
+  predictions_dir: "results/visual_models/predictions"
+  xai_dir: "results/visual_models/xai"
+  saliency_dir: "results/visual_models/xai/saliency"
+  shap_dir: "results/visual_models/xai/shap"
+  splits:
+    train: "train"
+    val: "val"
+    test: "test"
+
+training:
+#parametri per il training
+
+  image_size: 224
+  #dimensione a cui vengono ridimensionate le immagini
+  batch_size: 8
+  #numero di immagini per batch
+  num_workers: 0
+  #numero di processi usati dai DataLoader
+  cpu_num_threads: 4
+  #numero di thread PyTorch usati quando si lavora su CPU
+  learning_rate: 0.0003
+  #learning rate utilizzato da AdamW
+  weight_decay: 0.0005
+  #weight decay utilizzato da AdamW
+  max_epochs: 40
+  #numero massimo di epoche
+  early_stopping_patience: 8
+  #numero di epoche consecutive senza miglioramento prima dell'early stopping
+  train_max_batches: null
+  #numero massimo di batch usati nel training, null significa tutti
+  val_max_batches: null
+  #stesso di sopra ma per il validation
+
+loss:
+  min_positive_count: 1
+  #numero minimo usato per evitare una divisione per zero nel conteggio dei positivi
+  min_negative_count: 1
+  #stesso di sopra ma per i negativi
+
+prediction:
+  positive_threshold: 0.5
+  #soglia usata per trasformare la probabilità della classe positiva in una predizione binaria
+
+preprocessing:
+  imagenet_mean: [0.485, 0.456, 0.406]
+  imagenet_std: [0.229, 0.224, 0.225]
+  #media e deviazione standard usata per la normalizzazione delle immagini
+  affine_degrees: 5
+  #ampiezza massima della rotazione nell'augmentation
+  affine_translate: [0.03, 0.03]
+  #traslazione massima orizzontale e verticale nell'augmentation
+  affine_scale: [0.95, 1.05]
+  #intervallo di scala usato nell'augmentation
+
+models:
+#modelli utilizzati
+
+  variants:
+    - cnn_scratch
+    #CNN addestrata da zero
+    - resnet18_pretrained
+    #ResNet-18 con pesi pretrained
+    - resnet18_scratch
+    #ResNet-18 addestrata da zero
+    - vit_tiny_pretrained
+    #ViT-Tiny con pesi pretrained
+    - vit_tiny_scratch
+    #ViT-Tiny addestrata da zero
+
+  multitask_heads:
+    n_tasks: 20
+    #numero di teste binarie, una per task
+
+  cnn:
+  #iperparamtri cnn
+  
+    feature_dim: 256
+    #dimensione della rappresentazione prodotta dalla CNN
+    input_channels: 3
+    #numero di canali dell'immagine in ingresso
+    conv1_channels: 32
+    #numero di canali del primo blocco convoluzionale
+    conv2_channels: 64
+    #numero di canali del secondo blocco convoluzionale
+    conv3_channels: 128
+    #numero di canali del terzo blocco convoluzionale
+    kernel_size: 3
+    #dimensione dei kernel convoluzionali
+    padding: 1
+    #padding utilizzato nelle convoluzioni
+    dropout: 0.15
+    #dropout applicato alla rappresentazione finale
+
+  resnet18:
+  #iperparametri resnet18
+    pretrained_weights: "DEFAULT"
+    #configurazione dei pesi usata per la ResNet-18 pretrained
+
+  vit_tiny:
+  #iperparametri vit_tiny
+    model_name: "vit_tiny_patch16_224"
+    #nome del modello ViT utilizzato
+    num_classes: 0
+    #numero di classi usate dal backbone per rimuovere il classificatore originale
+
+optimizer:
+#parametri ottimizzatore
+  name: "AdamW"
+  #ottimizzatore utilizzato nel training
+  scheduler_mode: "min"
+  #la scheduler controlla il minimo della validation loss
+  scheduler_factor: 0.5
+  #fattore con cui viene ridotto il learning rate
+  scheduler_patience: 3
+  #numero di epoche senza miglioramento prima di ridurre il learning rate
+
+benchmark_plot:
+  figsize: [10, 5]
+  ylim: [0.0, 1.05]
+  dpi: 200
+
+test_plot:
+  figsize: [15, 5]
+  ylim: [0.0, 1.05]
+  dpi: 200
+
+xai:
+  tasks: [0, 9, 13, 14, 15, 19]
+  #task selezionati per l'analisi XAI
+  confidence_reference: 0.5
+  #valore di riferimento usato per scegliere i casi più sicuri
+  cases_figsize_per_case: [4, 4]
+  saliency_figsize: [10, 4]
+  gradcam_figsize: [10, 4]
+  shap_figsize: [10, 4]
+  dpi: 200
+  shap_background_samples: 16
+  #numero massimo di immagini usate come background per SHAP
+  shap_colorbar_fraction: 0.046
+  shap_colorbar_pad: 0.04
+  shap_default_range: 1.0<

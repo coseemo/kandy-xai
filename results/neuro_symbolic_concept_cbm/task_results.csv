@@ -1,0 +1,21 @@
+task_id,task_name,accuracy,f1
+0,triangle vs any,0.88,0.8235294117647058
+1,square vs any,0.96,0.9473684210526315
+2,circle vs any,1.0,1.0
+3,red vs any,0.92,0.8888888888888888
+4,green vs any,0.88,0.8
+5,blue vs any,0.96,0.96
+6,cyan vs any,0.84,0.7777777777777778
+7,magenta vs any,0.8,0.7368421052631579
+8,yellow vs any,0.96,0.9090909090909091
+9,red triangle on the right,0.92,0.8888888888888888
+10,red triangle on the right and arbitrary objects,0.92,0.9444444444444444
+11,red triangle on the right and at least one circle and arbitrary objects,0.88,0.9142857142857143
+12,red triangle on the right and at least one blue object and arbitrary objects,0.88,0.9090909090909091
+13,"triangle and square, same color",0.68,0.7647058823529411
+14,palindrome aba,0.28,0.3076923076923077
+15,house,0.6,0.5454545454545454
+16,car,0.84,0.8333333333333334
+17,tower,0.92,0.8888888888888888
+18,wagon,0.92,0.9411764705882353
+19,traffic light,0.88,0.6666666666666666

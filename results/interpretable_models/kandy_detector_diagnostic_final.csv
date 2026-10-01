@@ -1,4 +1,4 @@
-split,mean_truth,mean_detected,mae_count,count_exact,shape_accuracy,color_accuracy,size_accuracy
-test,2.068,1.824,0.244,0.788,0.945,1.0,0.911
-train,2.065,1.808,0.257,0.772,0.948,1.0,0.916
-val,2.086,1.854,0.232,0.788,0.964,1.0,0.913
+mean_truth,mean_detected,mae_count,count_exact,shape_accuracy,color_accuracy,size_accuracy
+2.068,2.022,0.046,0.954,0.947,1.0,0.871
+2.065,2.027,0.038,0.963,0.95,1.0,0.873
+2.086,2.036,0.05,0.954,0.966,1.0,0.867

@@ -1,0 +1,6 @@
+{
+  "selected_variant": "resnet18_pretrained",
+  "selection_metric": "mean_validation_f1",
+  "validation_f1": 0.9229128372763441,
+  "seed": 12345
+}

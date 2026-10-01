@@ -1,0 +1,198 @@
+seed: 45
+#imposto il seed per riproducibilità
+
+task_count: 20
+
+task_names:
+#nomi dei task
+
+  0: "triangle vs any"
+  1: "square vs any"
+  2: "circle vs any"
+  3: "red vs any"
+  4: "green vs any"
+  5: "blue vs any"
+  6: "cyan vs any"
+  7: "magenta vs any"
+  8: "yellow vs any"
+  9: "red triangle on the right"
+  10: "red triangle on the right and arbitrary objects"
+  11: "red triangle on the right and at least one circle and arbitrary objects"
+  12: "red triangle on the right and at least one blue object and arbitrary objects"
+  13: "triangle and square, same color"
+  14: "palindrome aba"
+  15: "house"
+  16: "car"
+  17: "tower"
+  18: "wagon"
+  19: "traffic light"
+  
+
+shapes:
+#forme utilizzate dal detector
+
+  - triangle
+  - square
+  - circle
+
+colors:
+#colori usati dal detector
+
+  - red  
+  - green
+  - blue
+  - cyan
+  - magenta
+  - yellow
+  
+
+sizes:
+#classi dimension
+
+  - small
+  - large
+
+color_rgb:
+#campioni di colore in rgb
+
+  red: [255, 0, 0]
+  green: [0, 255, 0]
+  blue: [0, 0, 255]
+  cyan: [0, 255, 255]
+  magenta: [255, 0, 255]
+  yellow: [255, 255, 0]
+
+paths:
+#percorsi di salvataggio
+
+  data_dir: "data/samples/sets"
+  splits: [train, val, test]
+  plots_dir: "results/interpretable_models/plots"
+  errors_dir: "results/interpretable_models/errors"
+  results_dir: "results/interpretable_models"
+
+perception:
+#parametri della percezione 
+
+  template_size: 96
+  #dimensione standard utilizzata per i template delle forme
+  color_distance_threshold: 150.0
+  #soglia della distanza dal colore di riferimento
+  binary_closing_kernel_size: 2
+  #dimensione della struttura usata per il binary closing
+  component_min_area: 2
+  #area minima di una componente per essere considerata
+  contour_min_area: 5
+  #area minima del contorno per considerare affidabile la forma
+  empty_coordinate_value: 0.5
+  #valore usato quando non esistono oggetti della forma considerata
+  empty_std_value: 0.0
+  #valore usato quando non esistono oggetti per la deviazione standard
+  size_threshold:
+    min_area_values: 10
+    #numero minimo di aree necessario per eseguire k-means
+    fallback: 0.01
+    #soglia usata quando non ci sono abbastanza aree
+    kmeans:
+      n_clusters: 2
+      #numero di cluster utilizzati per distinguere small e large
+      n_init: 20
+      #numero di inizializzazioni di k-means
+
+shape_templates:
+  circle_radius_fraction: 0.31
+  #frazione del lato usata per il raggio del cerchio
+  square_margin_fraction: 0.18
+  #frazione del lato usata come margine del quadrato
+  triangle_top_y_fraction: 0.12
+  #coordinata verticale del vertice superiore del triangolo
+  triangle_left_x_fraction: 0.15
+  #coordinata orizzontale del vertice sinistro del triangolo
+  triangle_base_y_fraction: 0.84
+  #coordinata verticale della base del triangolo
+  triangle_right_x_fraction: 0.85
+  #coordinata orizzontale del vertice destro del triangolo
+  crop_canvas_padding: 8
+  #margine aggiunto alla tela prima della normalizzazione
+
+relations:
+  position_threshold: 0.12
+  #soglia utilizzata per le relazioni orizzontali e verticali
+  diagonal_difference_threshold: 0.20
+  #tolleranza utilizzata per riconoscere una relazione diagonale
+  close_distance_threshold: 0.25
+  #distanza massima utilizzata per considerare due oggetti vicini
+
+models:
+#iperparametri dei modelli
+
+  logistic:
+    max_iter: 2000
+    #numero massimo di iterazioni della Logistic Regression
+    class_weight: "balanced"
+    #peso bilanciato delle classi nella Logistic Regression
+  tree:
+    max_depth: 5
+    #profondità massima del Decision Tree
+    min_samples_leaf: 4
+    #numero minimo di esempi in una foglia del Decision Tree
+    class_weight: "balanced"
+    #peso bilanciato delle classi nel Decision Tree
+  ebm:
+    interactions: 5
+    #numero massimo di interazioni utilizzate dall'EBM
+    max_bins: 32
+    #numero massimo di intervalli utilizzati dalle feature dell'EBM
+    max_rounds: 500
+    #numero massimo di round di boosting dell'EBM
+    learning_rate: 0.03
+    #learning rate dell'EBM
+
+experiment:
+#parametri esperimenti 
+
+  explain_tasks: [0, 2, 9, 12, 14, 16]
+  top_n: 10
+  #numero massimo di feature mostrate nei grafici delle importanze
+  diagnostic_task_id: 19
+  #task utilizzato per il controllo delle probabilità dell'EBM
+  visual_check:
+    samples: 8
+    #numero di immagini utilizzate nel controllo visivo
+    rows: 2
+    cols: 4
+    figsize: [14, 7]
+    scatter_size: 10
+    label_fontsize: 7
+    dpi: 150
+    
+  plots:
+    logistic_figsize: [9, 6]
+    tree_figsize: [24, 12]
+    ebm_importance_figsize: [9, 6]
+    ebm_curve_figsize: [9, 5]
+    ebm_heatmap_figsize: [9, 7]
+    dpi: 200
+    tree_fontsize: 8
+    tree_export_max_depth: 5
+    ebm_curve_marker: "o"
+    zero_line_width: 1
+  errors:
+    n_cols: 4
+    row_height: 3.5
+    title_fontsize: 14
+    dpi: 200
+
+banned_feature_keywords:
+#feature bannate perché troppo specifiche
+
+  - "red_triangle"
+  - "triangle_square"
+  - "circle_with_red_triangle"
+  - "blue_with_red_triangle"
+  - "traffic_light"
+  - "palindrome"
+  - "house"
+  - "wagon"
+  - "tower"
+  - "car"

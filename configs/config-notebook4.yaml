@@ -1,0 +1,257 @@
+seed: 12345
+#imposto il seed per riproducibilità
+
+task_count: 20
+
+task_names:
+#nomi dei task
+
+  0: "triangle vs any"
+  1: "square vs any"
+  2: "circle vs any"
+  3: "red vs any"
+  4: "green vs any"
+  5: "blue vs any"
+  6: "cyan vs any"
+  7: "magenta vs any"
+  8: "yellow vs any"
+  9: "red triangle on the right"
+  10: "red triangle on the right and arbitrary objects"
+  11: "red triangle on the right and at least one circle and arbitrary objects"
+  12: "red triangle on the right and at least one blue object and arbitrary objects"
+  13: "triangle and square, same color"
+  14: "palindrome aba"
+  15: "house"
+  16: "car"
+  17: "tower"
+  18: "wagon"
+  19: "traffic light"
+
+paths:
+#percorsi cartelle
+
+  data_dir: "data/samples/sets"
+  results_dir: "results/neuro_symbolic_concept_cbm"
+  checkpoints_dir: "results/neuro_symbolic_concept_cbm/checkpoints"
+  plots_dir: "results/neuro_symbolic_concept_cbm/plots"
+  config_file: "configs/config-notebook4.yaml"
+
+  root_candidates:
+    - "."
+    - ".."
+    - "~/Downloads/kandy-xai"
+
+  splits:
+    train: "train"
+    val: "val"
+    test: "test"
+
+concepts:
+#vocabolario usato per la costruzione dei concetti
+
+  shapes:
+    - "triangle"
+    - "square"
+    - "circle"
+
+  colors:
+    - "red"
+    - "green"
+    - "blue"
+    - "cyan"
+    - "magenta"
+    - "yellow"
+
+  sizes:
+    - "small"
+    - "large"
+
+  relations:
+    - "stack"
+    - "side_by_side"
+
+training:
+#parametri per il training
+
+  image_size: 224
+  #dimensione a cui vengono ridimensionate le immagini
+
+  batch_size: 16
+  #numero di immagini per batch
+
+  num_workers: 0
+  #numero di processi usati dai DataLoader
+
+  cpu_num_threads: 4
+  #numero di thread PyTorch usati quando si lavora su CPU
+
+  epochs: 20
+  #numero massimo di epoche
+
+  learning_rate: 0.0005
+  #learning rate utilizzato da AdamW
+
+  weight_decay: 0.0001
+  #weight decay utilizzato da AdamW
+
+  task_loss_weight: 0.25
+  #peso assegnato alla loss dei task
+
+  early_stopping_patience: 6
+  #numero di epoche consecutive senza miglioramento prima dell'early stopping
+
+loss:
+#parametri delle loss
+
+  min_positive_count: 1
+  #numero minimo usato per evitare una divisione per zero nel conteggio dei positivi
+
+  min_negative_count: 1
+  #stesso di sopra ma per i negativi
+
+  concept_pos_weight_max: 20.0
+  #limite massimo del peso assegnato ai concetti poco frequenti
+
+prediction:
+#parametri per la trasformazione delle predizioni
+
+  concept_threshold: 0.5
+  #soglia usata per trasformare la probabilità dei concetti in una predizione binaria
+
+  positive_threshold: 0.5
+  #soglia usata per trasformare la probabilità del task positivo in una predizione binaria
+
+  logit_threshold: 0.0
+  #soglia usata per trasformare i logits dei task in predizioni 0/1
+
+preprocessing:
+#parametri per il preprocessing delle immagini
+
+  imagenet_mean: [0.485, 0.456, 0.406]
+  imagenet_std: [0.229, 0.224, 0.225]
+  #media e deviazione standard usata per la normalizzazione delle immagini
+
+  affine_degrees: 5
+  #ampiezza massima della rotazione nell'augmentation
+
+  affine_translate: [0.03, 0.03]
+  #traslazione massima orizzontale e verticale nell'augmentation
+
+  affine_scale: [0.95, 1.05]
+  #intervallo di scala usato nell'augmentation
+
+models:
+#modelli utilizzati
+
+  linear:
+    #configurazione della testa lineare
+
+    backbone: "resnet18"
+    #backbone utilizzato
+
+    pretrained_weights: "DEFAULT"
+    #configurazione dei pesi pretrained della ResNet-18
+
+    n_tasks: 20
+    #numero di output della task head lineare
+
+    variant: "resnet18_pretrained"
+    #nome della variante usato per salvare la configurazione
+
+  mlp:
+    #configurazione della testa MLP
+
+    backbone: "resnet18"
+
+    pretrained_weights: "DEFAULT"
+    #configurazione dei pesi pretrained della ResNet-18
+
+    n_tasks: 20
+    #numero di output della task head MLP
+
+    hidden_dim: 32
+    #dimensione dello hideen layer del MLP
+
+    variant: "resnet18_pretrained"
+    #nome della variante usato per salvare la configurazione
+
+optimizer:
+#parametri ottimizzatore
+
+  name: "AdamW"
+  #ottimizzatore utilizzato nel training
+
+analysis:
+#parametri per le analisi successive al training
+
+  intervention_value: 0.0
+  #valore usato per disattivare un concetto durante l'intervento
+
+  noise_seed: 42
+  #seed usato per l'esperimento con concetti rumorosi
+
+  noise_rates: [0.00, 0.05, 0.10, 0.20, 0.30]
+  #percentuali di rumore applicate ai concetti
+
+  per_task_ids_linear: [0, 9, 13, 14, 19]
+  #task selezionati per l'analisi degli interventi della testa lineare
+
+  per_task_ids_mlp: [9, 13, 14, 19]
+  #task selezionati per l'analisi degli interventi della MLP
+
+  per_task_top_k: 10
+  #numero di concetti mostrati per ciascun task nelle analisi di intervento
+
+  rare_concept_threshold: 0.01
+  #soglia usata per contare i concetti con frequenza molto bassa
+
+visualization:
+#parametri per le visualizzazioni
+
+  task_ids: [0, 4, 9, 11, 14, 15, 19]
+  #task mostrati nei grafici dei concetti
+
+  split: "test"
+  #split usato per le visualizzazioni
+
+  top_k: 20
+  #numero massimo di concetti mostrati
+
+  linear_example_idx: 0
+  #esempio usato nel grafico della testa lineare
+
+  mlp_example_idx: 5
+  #esempio usato nel grafico della testa MLP
+
+  fig_width: 16
+  fig_height_per_task: 5
+  weights_figsize: [20, 9]
+  weights_tick_fontsize: 8
+  cmap: "coolwarm"
+  grid_alpha: 0.3
+  dpi: 200
+  analysis_figsize: [10, 6]
+
+outputs:
+#nomi dei file salvati durante il notebook
+
+  training_history: "training_history.csv"
+  linear_checkpoint: "concept_cbm_best.pt"
+  linear_task_results: "task_results.csv"
+  linear_concept_results: "concept_results.csv"
+  linear_concept_interventions: "concept_interventions.csv"
+  linear_concept_interventions_by_task: "concept_interventions_by_task.csv"
+  linear_oracle_decomposition: "decomposition.csv"
+  linear_config_json: "concept_cbm_config.json"
+  linear_concept_importance: "concept_importance.csv"
+  linear_concept_noise: "concept_noise_robustness.csv"
+  linear_weights_plot: "task_head_weights.png"
+  linear_concepts_plot: "tasks_concepts_{split}_example_{example_idx}.png"
+  mlp_concept_results: "concept_results_mlp.csv"
+  mlp_concept_interventions: "mlp_concept_interventions.csv"
+  mlp_concept_interventions_by_task: "mlp_concept_interventions_by_task.csv"
+  mlp_concept_importance: "mlp_concept_importance.csv"
+  mlp_concept_noise: "mlp_concept_noise_robustness.csv"
+  mlp_oracle_decomposition: "mlp_oracle_vs_predicted.csv"
+  mlp_oracle_results: "mlp_oracle_results.csv"
+  mlp_concepts_plot: "tasks_concepts_mlp_{split}_example_{example_idx}.png"

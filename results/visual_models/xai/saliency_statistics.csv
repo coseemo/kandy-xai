@@ -1,0 +1,20 @@
+task_id,task,case,filename,prediction,true_label,mean_saliency,max_saliency,path
+0,triangle vs any,TP,0/0003.png,1,1,0.007870573550462723,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_00_TP.png
+0,triangle vs any,FN,0/0011.png,0,1,0.0019719786942005157,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_00_FN.png
+0,triangle vs any,TN,0/0024.png,0,0,0.007084439042955637,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_00_TN.png
+9,red triangle on the right,TP,9/0014.png,1,1,0.008514047600328922,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_09_TP.png
+9,red triangle on the right,TN,9/0005.png,0,0,0.012770358473062515,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_09_TN.png
+13,"triangle and square, same color",TP,13/0007.png,1,1,0.006504866760224104,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_13_TP.png
+13,"triangle and square, same color",FP,13/0014.png,1,0,0.003144057933241129,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_13_FP.png
+13,"triangle and square, same color",FN,13/0003.png,0,1,0.01839802972972393,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_13_FN.png
+13,"triangle and square, same color",TN,13/0015.png,0,0,0.003949340432882309,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_13_TN.png
+14,palindrome aba,TP,14/0008.png,1,1,0.009380258619785309,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_14_TP.png
+14,palindrome aba,FP,14/0003.png,1,0,0.009077210910618305,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_14_FP.png
+14,palindrome aba,FN,14/0024.png,0,1,0.021975375711917877,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_14_FN.png
+14,palindrome aba,TN,14/0014.png,0,0,0.0118067292496562,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_14_TN.png
+15,house,TP,15/0018.png,1,1,0.004220820963382721,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_15_TP.png
+15,house,FP,15/0007.png,1,0,0.002243693917989731,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_15_FP.png
+15,house,TN,15/0005.png,0,0,0.005651936866343021,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_15_TN.png
+19,traffic light,TP,19/0015.png,1,1,0.008876924403011799,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_19_TP.png
+19,traffic light,FP,19/0006.png,1,0,0.008721298538148403,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_19_FP.png
+19,traffic light,TN,19/0000.png,0,0,0.01095120795071125,1.0,/home/cosimo/Downloads/kandy-xai/results/visual_models/xai/saliency/task_19_TN.png

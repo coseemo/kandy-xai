@@ -1,0 +1,501 @@
+filename,task_id,true_label,probability_positive,prediction,task,correct
+0/0000.png,0,1,0.9992795586585999,1,triangle vs any,True
+0/0001.png,0,1,0.9998550415039062,1,triangle vs any,True
+0/0002.png,0,0,0.01795218326151371,0,triangle vs any,True
+0/0003.png,0,1,0.9999314546585083,1,triangle vs any,True
+0/0004.png,0,0,0.006321264896541834,0,triangle vs any,True
+0/0005.png,0,0,0.029214270412921906,0,triangle vs any,True
+0/0006.png,0,1,0.9172847270965576,1,triangle vs any,True
+0/0007.png,0,1,0.9966267347335815,1,triangle vs any,True
+0/0008.png,0,0,0.05655142664909363,0,triangle vs any,True
+0/0009.png,0,0,0.0855664387345314,0,triangle vs any,True
+0/0010.png,0,1,0.999481737613678,1,triangle vs any,True
+0/0011.png,0,1,0.3476979434490204,0,triangle vs any,False
+0/0012.png,0,0,0.00938426610082388,0,triangle vs any,True
+0/0013.png,0,0,0.026704220101237297,0,triangle vs any,True
+0/0014.png,0,0,0.040794290602207184,0,triangle vs any,True
+0/0015.png,0,0,0.006101557053625584,0,triangle vs any,True
+0/0016.png,0,0,0.051751554012298584,0,triangle vs any,True
+0/0017.png,0,0,0.02039768360555172,0,triangle vs any,True
+0/0018.png,0,0,0.01778079755604267,0,triangle vs any,True
+0/0019.png,0,0,0.03571617230772972,0,triangle vs any,True
+0/0020.png,0,0,0.016173284500837326,0,triangle vs any,True
+0/0021.png,0,0,0.035445135086774826,0,triangle vs any,True
+0/0022.png,0,0,0.05509556829929352,0,triangle vs any,True
+0/0023.png,0,0,0.01809098944067955,0,triangle vs any,True
+0/0024.png,0,0,0.0013350085355341434,0,triangle vs any,True
+1/0000.png,1,1,0.5499844551086426,1,square vs any,True
+1/0001.png,1,1,0.9978963136672974,1,square vs any,True
+1/0002.png,1,0,0.057673096656799316,0,square vs any,True
+1/0003.png,1,0,0.0016282063443213701,0,square vs any,True
+1/0004.png,1,0,0.00695099588483572,0,square vs any,True
+1/0005.png,1,1,0.43529507517814636,0,square vs any,False
+1/0006.png,1,1,0.9943416118621826,1,square vs any,True
+1/0007.png,1,0,0.12295079231262207,0,square vs any,True
+1/0008.png,1,1,0.9954388737678528,1,square vs any,True
+1/0009.png,1,1,0.9904649257659912,1,square vs any,True
+1/0010.png,1,0,0.0067718480713665485,0,square vs any,True
+1/0011.png,1,1,0.9990697503089905,1,square vs any,True
+1/0012.png,1,0,0.00043470427044667304,0,square vs any,True
+1/0013.png,1,0,0.0004629533796105534,0,square vs any,True
+1/0014.png,1,0,0.00042799540096893907,0,square vs any,True
+1/0015.png,1,0,0.024784430861473083,0,square vs any,True
+1/0016.png,1,0,0.0072922250255942345,0,square vs any,True
+1/0017.png,1,1,0.9830207824707031,1,square vs any,True
+1/0018.png,1,0,0.001320204813964665,0,square vs any,True
+1/0019.png,1,0,0.0032055522315204144,0,square vs any,True
+1/0020.png,1,0,0.0014121822314336896,0,square vs any,True
+1/0021.png,1,0,0.12328039854764938,0,square vs any,True
+1/0022.png,1,1,0.9867720007896423,1,square vs any,True
+1/0023.png,1,0,0.1880350559949875,0,square vs any,True
+1/0024.png,1,0,0.023542851209640503,0,square vs any,True
+2/0000.png,2,0,0.016022207215428352,0,circle vs any,True
+2/0001.png,2,0,0.0919695645570755,0,circle vs any,True
+2/0002.png,2,1,0.9539316892623901,1,circle vs any,True
+2/0003.png,2,1,0.938510537147522,1,circle vs any,True
+2/0004.png,2,1,0.9847553372383118,1,circle vs any,True
+2/0005.png,2,0,0.02175068110227585,0,circle vs any,True
+2/0006.png,2,1,0.9927565455436707,1,circle vs any,True
+2/0007.png,2,0,0.047445349395275116,0,circle vs any,True
+2/0008.png,2,1,0.9890531897544861,1,circle vs any,True
+2/0009.png,2,1,0.9402713179588318,1,circle vs any,True
+2/0010.png,2,0,0.003574805334210396,0,circle vs any,True
+2/0011.png,2,1,0.09343557804822922,0,circle vs any,False
+2/0012.png,2,1,0.9886254072189331,1,circle vs any,True
+2/0013.png,2,0,0.08201442658901215,0,circle vs any,True
+2/0014.png,2,1,0.9968714118003845,1,circle vs any,True
+2/0015.png,2,0,0.02948528155684471,0,circle vs any,True
+2/0016.png,2,1,0.06622578203678131,0,circle vs any,False
+2/0017.png,2,0,0.015535186976194382,0,circle vs any,True
+2/0018.png,2,1,0.9937216639518738,1,circle vs any,True
+2/0019.png,2,0,0.010999633930623531,0,circle vs any,True
+2/0020.png,2,1,0.7178604602813721,1,circle vs any,True
+2/0021.png,2,1,0.9966161847114563,1,circle vs any,True
+2/0022.png,2,0,0.03153671324253082,0,circle vs any,True
+2/0023.png,2,0,0.4033247232437134,0,circle vs any,True
+2/0024.png,2,1,0.9917884469032288,1,circle vs any,True
+3/0000.png,3,0,0.004880438093096018,0,red vs any,True
+3/0001.png,3,0,0.016633687540888786,0,red vs any,True
+3/0002.png,3,0,0.006938122678548098,0,red vs any,True
+3/0003.png,3,0,7.216778612928465e-05,0,red vs any,True
+3/0004.png,3,1,0.999426007270813,1,red vs any,True
+3/0005.png,3,1,0.9997568726539612,1,red vs any,True
+3/0006.png,3,0,0.001818621763959527,0,red vs any,True
+3/0007.png,3,0,0.02944311499595642,0,red vs any,True
+3/0008.png,3,1,0.996927797794342,1,red vs any,True
+3/0009.png,3,0,0.0037441381718963385,0,red vs any,True
+3/0010.png,3,0,0.0014452511677518487,0,red vs any,True
+3/0011.png,3,0,0.0046483962796628475,0,red vs any,True
+3/0012.png,3,0,0.0004504235403146595,0,red vs any,True
+3/0013.png,3,0,0.0011915824143216014,0,red vs any,True
+3/0014.png,3,1,0.9976245760917664,1,red vs any,True
+3/0015.png,3,1,0.9844468235969543,1,red vs any,True
+3/0016.png,3,1,0.999778687953949,1,red vs any,True
+3/0017.png,3,1,0.9997729659080505,1,red vs any,True
+3/0018.png,3,1,0.9991889595985413,1,red vs any,True
+3/0019.png,3,0,0.0599643811583519,0,red vs any,True
+3/0020.png,3,0,0.024029521271586418,0,red vs any,True
+3/0021.png,3,0,0.0004219674738124013,0,red vs any,True
+3/0022.png,3,0,0.0048154620453715324,0,red vs any,True
+3/0023.png,3,0,0.001269465428777039,0,red vs any,True
+3/0024.png,3,0,0.0018560595344752073,0,red vs any,True
+4/0000.png,4,0,0.0001002899298327975,0,green vs any,True
+4/0001.png,4,0,0.0012645652750506997,0,green vs any,True
+4/0002.png,4,0,0.00010154168558074161,0,green vs any,True
+4/0003.png,4,0,0.00035248094354756176,0,green vs any,True
+4/0004.png,4,1,0.9843878746032715,1,green vs any,True
+4/0005.png,4,1,0.9988338351249695,1,green vs any,True
+4/0006.png,4,1,0.999140739440918,1,green vs any,True
+4/0007.png,4,1,0.996653139591217,1,green vs any,True
+4/0008.png,4,0,0.00012465704639907926,0,green vs any,True
+4/0009.png,4,0,5.1411119784461334e-05,0,green vs any,True
+4/0010.png,4,0,0.01194206066429615,0,green vs any,True
+4/0011.png,4,0,0.00045317254262045026,0,green vs any,True
+4/0012.png,4,0,0.600476086139679,1,green vs any,False
+4/0013.png,4,0,0.08617556840181351,0,green vs any,True
+4/0014.png,4,0,0.01074330322444439,0,green vs any,True
+4/0015.png,4,1,0.999448835849762,1,green vs any,True
+4/0016.png,4,0,0.0017370476853102446,0,green vs any,True
+4/0017.png,4,0,0.0009751697070896626,0,green vs any,True
+4/0018.png,4,0,0.0030204239301383495,0,green vs any,True
+4/0019.png,4,1,0.9990307092666626,1,green vs any,True
+4/0020.png,4,0,0.0004794880223926157,0,green vs any,True
+4/0021.png,4,0,0.6314799785614014,1,green vs any,False
+4/0022.png,4,1,0.9988908171653748,1,green vs any,True
+4/0023.png,4,0,0.015138063579797745,0,green vs any,True
+4/0024.png,4,0,0.0003727504808921367,0,green vs any,True
+5/0000.png,5,0,0.000684694794472307,0,blue vs any,True
+5/0001.png,5,1,0.9990090131759644,1,blue vs any,True
+5/0002.png,5,1,0.9958274960517883,1,blue vs any,True
+5/0003.png,5,0,0.0031547979451715946,0,blue vs any,True
+5/0004.png,5,0,0.01734069176018238,0,blue vs any,True
+5/0005.png,5,0,0.08682789653539658,0,blue vs any,True
+5/0006.png,5,0,0.0011064732680097222,0,blue vs any,True
+5/0007.png,5,0,0.0028360295109450817,0,blue vs any,True
+5/0008.png,5,1,0.9991257786750793,1,blue vs any,True
+5/0009.png,5,0,0.013598226942121983,0,blue vs any,True
+5/0010.png,5,1,0.9999785423278809,1,blue vs any,True
+5/0011.png,5,0,0.0034562619403004646,0,blue vs any,True
+5/0012.png,5,1,0.9989816546440125,1,blue vs any,True
+5/0013.png,5,1,0.9986165761947632,1,blue vs any,True
+5/0014.png,5,0,0.014768261462450027,0,blue vs any,True
+5/0015.png,5,1,0.9997319579124451,1,blue vs any,True
+5/0016.png,5,1,0.9998948574066162,1,blue vs any,True
+5/0017.png,5,1,0.9999562501907349,1,blue vs any,True
+5/0018.png,5,0,0.002042593667283654,0,blue vs any,True
+5/0019.png,5,1,0.9989668130874634,1,blue vs any,True
+5/0020.png,5,0,0.0003717499494086951,0,blue vs any,True
+5/0021.png,5,1,0.9999982118606567,1,blue vs any,True
+5/0022.png,5,1,0.9966486096382141,1,blue vs any,True
+5/0023.png,5,0,0.006491417996585369,0,blue vs any,True
+5/0024.png,5,0,0.0065217395313084126,0,blue vs any,True
+6/0000.png,6,0,0.25054511427879333,0,cyan vs any,True
+6/0001.png,6,0,0.005823586136102676,0,cyan vs any,True
+6/0002.png,6,1,0.9999752044677734,1,cyan vs any,True
+6/0003.png,6,0,0.7695333361625671,1,cyan vs any,False
+6/0004.png,6,0,0.009258434176445007,0,cyan vs any,True
+6/0005.png,6,0,0.0014564187731593847,0,cyan vs any,True
+6/0006.png,6,0,0.00043994523002766073,0,cyan vs any,True
+6/0007.png,6,1,0.997951090335846,1,cyan vs any,True
+6/0008.png,6,0,0.04968360811471939,0,cyan vs any,True
+6/0009.png,6,1,0.9559383988380432,1,cyan vs any,True
+6/0010.png,6,1,0.9917850494384766,1,cyan vs any,True
+6/0011.png,6,0,0.0014829350402578712,0,cyan vs any,True
+6/0012.png,6,0,0.3066638112068176,0,cyan vs any,True
+6/0013.png,6,0,0.03244008868932724,0,cyan vs any,True
+6/0014.png,6,0,0.016636447980999947,0,cyan vs any,True
+6/0015.png,6,0,0.0012602078495547175,0,cyan vs any,True
+6/0016.png,6,0,0.5592544078826904,1,cyan vs any,False
+6/0017.png,6,0,6.08798245593789e-06,0,cyan vs any,True
+6/0018.png,6,0,0.017417732626199722,0,cyan vs any,True
+6/0019.png,6,1,0.9998672008514404,1,cyan vs any,True
+6/0020.png,6,1,0.9497779607772827,1,cyan vs any,True
+6/0021.png,6,0,0.0008201939053833485,0,cyan vs any,True
+6/0022.png,6,1,0.999915361404419,1,cyan vs any,True
+6/0023.png,6,0,0.0071627614088356495,0,cyan vs any,True
+6/0024.png,6,0,7.27970473235473e-05,0,cyan vs any,True
+7/0000.png,7,1,0.9994493126869202,1,magenta vs any,True
+7/0001.png,7,0,0.00036825070856139064,0,magenta vs any,True
+7/0002.png,7,0,0.0014277370646595955,0,magenta vs any,True
+7/0003.png,7,1,0.9995005130767822,1,magenta vs any,True
+7/0004.png,7,0,0.0014842007076367736,0,magenta vs any,True
+7/0005.png,7,1,0.9891993999481201,1,magenta vs any,True
+7/0006.png,7,1,0.9988349080085754,1,magenta vs any,True
+7/0007.png,7,0,0.0068020885810256,0,magenta vs any,True
+7/0008.png,7,0,0.004123182967305183,0,magenta vs any,True
+7/0009.png,7,0,0.0005650839302688837,0,magenta vs any,True
+7/0010.png,7,0,0.026053762063384056,0,magenta vs any,True
+7/0011.png,7,0,0.0006430561770685017,0,magenta vs any,True
+7/0012.png,7,1,0.9992401599884033,1,magenta vs any,True
+7/0013.png,7,0,0.010362938046455383,0,magenta vs any,True
+7/0014.png,7,1,0.9966152310371399,1,magenta vs any,True
+7/0015.png,7,0,0.0016703908331692219,0,magenta vs any,True
+7/0016.png,7,0,0.0026308593805879354,0,magenta vs any,True
+7/0017.png,7,0,0.009897666983306408,0,magenta vs any,True
+7/0018.png,7,0,0.0018824231810867786,0,magenta vs any,True
+7/0019.png,7,1,0.9945449829101562,1,magenta vs any,True
+7/0020.png,7,0,1.355898621113738e-05,0,magenta vs any,True
+7/0021.png,7,0,0.013423195108771324,0,magenta vs any,True
+7/0022.png,7,0,0.04922100901603699,0,magenta vs any,True
+7/0023.png,7,0,0.1883348971605301,0,magenta vs any,True
+7/0024.png,7,0,0.0026345201767981052,0,magenta vs any,True
+8/0000.png,8,1,0.9991362690925598,1,yellow vs any,True
+8/0001.png,8,1,0.9963533878326416,1,yellow vs any,True
+8/0002.png,8,1,0.999690055847168,1,yellow vs any,True
+8/0003.png,8,0,0.0010385805508121848,0,yellow vs any,True
+8/0004.png,8,0,0.12070741504430771,0,yellow vs any,True
+8/0005.png,8,0,0.001392984762787819,0,yellow vs any,True
+8/0006.png,8,0,0.0035016362089663744,0,yellow vs any,True
+8/0007.png,8,0,0.0059052687138319016,0,yellow vs any,True
+8/0008.png,8,0,2.4270064386655577e-05,0,yellow vs any,True
+8/0009.png,8,0,0.0008231702959164977,0,yellow vs any,True
+8/0010.png,8,0,0.0031700117979198694,0,yellow vs any,True
+8/0011.png,8,0,8.81865416886285e-05,0,yellow vs any,True
+8/0012.png,8,0,0.0002685143263079226,0,yellow vs any,True
+8/0013.png,8,1,0.9999933242797852,1,yellow vs any,True
+8/0014.png,8,0,0.0026491358876228333,0,yellow vs any,True
+8/0015.png,8,0,0.0003761471889447421,0,yellow vs any,True
+8/0016.png,8,0,0.0002343292289879173,0,yellow vs any,True
+8/0017.png,8,0,0.05690768361091614,0,yellow vs any,True
+8/0018.png,8,0,0.002813131781294942,0,yellow vs any,True
+8/0019.png,8,0,0.003948728553950787,0,yellow vs any,True
+8/0020.png,8,0,0.022922899574041367,0,yellow vs any,True
+8/0021.png,8,0,0.015671178698539734,0,yellow vs any,True
+8/0022.png,8,0,0.019283710047602654,0,yellow vs any,True
+8/0023.png,8,1,0.999966025352478,1,yellow vs any,True
+8/0024.png,8,0,0.0005515965167433023,0,yellow vs any,True
+9/0000.png,9,1,0.9992848038673401,1,red triangle on the right,True
+9/0001.png,9,0,0.0017911086324602365,0,red triangle on the right,True
+9/0002.png,9,1,0.9998619556427002,1,red triangle on the right,True
+9/0003.png,9,1,0.999993085861206,1,red triangle on the right,True
+9/0004.png,9,1,0.9999117851257324,1,red triangle on the right,True
+9/0005.png,9,0,5.216840690991376e-06,0,red triangle on the right,True
+9/0006.png,9,0,0.0004167878068983555,0,red triangle on the right,True
+9/0007.png,9,0,0.00041246667387895286,0,red triangle on the right,True
+9/0008.png,9,0,0.0006019592983648181,0,red triangle on the right,True
+9/0009.png,9,0,0.0009168870747089386,0,red triangle on the right,True
+9/0010.png,9,0,0.0015919412253424525,0,red triangle on the right,True
+9/0011.png,9,0,0.0006074480479583144,0,red triangle on the right,True
+9/0012.png,9,0,0.03536386042833328,0,red triangle on the right,True
+9/0013.png,9,1,0.999983549118042,1,red triangle on the right,True
+9/0014.png,9,1,0.9999936819076538,1,red triangle on the right,True
+9/0015.png,9,0,6.789677718188614e-05,0,red triangle on the right,True
+9/0016.png,9,1,0.999859094619751,1,red triangle on the right,True
+9/0017.png,9,0,0.007999910041689873,0,red triangle on the right,True
+9/0018.png,9,0,0.00017518409003969282,0,red triangle on the right,True
+9/0019.png,9,1,0.9999895095825195,1,red triangle on the right,True
+9/0020.png,9,0,0.0001048352787620388,0,red triangle on the right,True
+9/0021.png,9,0,0.0005427963915280998,0,red triangle on the right,True
+9/0022.png,9,0,0.0002061862323898822,0,red triangle on the right,True
+9/0023.png,9,0,0.00013086621765978634,0,red triangle on the right,True
+9/0024.png,9,0,3.5863009543390945e-05,0,red triangle on the right,True
+10/0000.png,10,0,0.0002949880436062813,0,red triangle on the right and arbitrary objects,True
+10/0001.png,10,1,0.9970631003379822,1,red triangle on the right and arbitrary objects,True
+10/0002.png,10,0,0.0008790473802946508,0,red triangle on the right and arbitrary objects,True
+10/0003.png,10,1,0.9962515234947205,1,red triangle on the right and arbitrary objects,True
+10/0004.png,10,0,0.0013352507958188653,0,red triangle on the right and arbitrary objects,True
+10/0005.png,10,1,0.9742282629013062,1,red triangle on the right and arbitrary objects,True
+10/0006.png,10,1,0.9998711347579956,1,red triangle on the right and arbitrary objects,True
+10/0007.png,10,1,0.9998346567153931,1,red triangle on the right and arbitrary objects,True
+10/0008.png,10,1,0.9999833106994629,1,red triangle on the right and arbitrary objects,True
+10/0009.png,10,0,0.004606308881193399,0,red triangle on the right and arbitrary objects,True
+10/0010.png,10,0,0.37111708521842957,0,red triangle on the right and arbitrary objects,True
+10/0011.png,10,0,0.0030059844721108675,0,red triangle on the right and arbitrary objects,True
+10/0012.png,10,0,9.858705016085878e-05,0,red triangle on the right and arbitrary objects,True
+10/0013.png,10,1,0.9999303817749023,1,red triangle on the right and arbitrary objects,True
+10/0014.png,10,1,0.9998874664306641,1,red triangle on the right and arbitrary objects,True
+10/0015.png,10,1,0.6824432611465454,1,red triangle on the right and arbitrary objects,True
+10/0016.png,10,1,0.987147867679596,1,red triangle on the right and arbitrary objects,True
+10/0017.png,10,1,0.9999518394470215,1,red triangle on the right and arbitrary objects,True
+10/0018.png,10,1,0.9999876022338867,1,red triangle on the right and arbitrary objects,True
+10/0019.png,10,1,0.9997559189796448,1,red triangle on the right and arbitrary objects,True
+10/0020.png,10,1,0.9978712797164917,1,red triangle on the right and arbitrary objects,True
+10/0021.png,10,0,0.0003929657978005707,0,red triangle on the right and arbitrary objects,True
+10/0022.png,10,1,0.9981797933578491,1,red triangle on the right and arbitrary objects,True
+10/0023.png,10,1,0.20508134365081787,0,red triangle on the right and arbitrary objects,False
+10/0024.png,10,1,0.999761164188385,1,red triangle on the right and arbitrary objects,True
+11/0000.png,11,1,0.9994562268257141,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0001.png,11,0,0.4904610216617584,0,red triangle on the right and at least one circle and arbitrary objects,True
+11/0002.png,11,1,0.9992948770523071,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0003.png,11,1,0.9995904564857483,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0004.png,11,1,0.9999873638153076,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0005.png,11,0,0.0001235360832652077,0,red triangle on the right and at least one circle and arbitrary objects,True
+11/0006.png,11,1,0.9998657703399658,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0007.png,11,0,0.00013437439338304102,0,red triangle on the right and at least one circle and arbitrary objects,True
+11/0008.png,11,1,0.9980130195617676,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0009.png,11,1,0.9950438737869263,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0010.png,11,1,0.9993282556533813,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0011.png,11,0,0.03648575395345688,0,red triangle on the right and at least one circle and arbitrary objects,True
+11/0012.png,11,1,0.9985180497169495,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0013.png,11,0,0.31991738080978394,0,red triangle on the right and at least one circle and arbitrary objects,True
+11/0014.png,11,1,0.9990257024765015,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0015.png,11,0,0.0041697886772453785,0,red triangle on the right and at least one circle and arbitrary objects,True
+11/0016.png,11,1,0.9993102550506592,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0017.png,11,0,0.9996250867843628,1,red triangle on the right and at least one circle and arbitrary objects,False
+11/0018.png,11,1,0.9618834853172302,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0019.png,11,0,0.0015449256170541048,0,red triangle on the right and at least one circle and arbitrary objects,True
+11/0020.png,11,1,0.9994725584983826,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0021.png,11,1,0.22991755604743958,0,red triangle on the right and at least one circle and arbitrary objects,False
+11/0022.png,11,0,0.6431812644004822,1,red triangle on the right and at least one circle and arbitrary objects,False
+11/0023.png,11,1,0.9998918771743774,1,red triangle on the right and at least one circle and arbitrary objects,True
+11/0024.png,11,1,0.9997435212135315,1,red triangle on the right and at least one circle and arbitrary objects,True
+12/0000.png,12,1,0.9998990297317505,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0001.png,12,1,0.9657304286956787,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0002.png,12,1,0.9969121217727661,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0003.png,12,1,0.9876606464385986,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0004.png,12,1,0.9994789958000183,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0005.png,12,1,0.9921505451202393,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0006.png,12,0,0.38963159918785095,0,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0007.png,12,0,0.7775441408157349,1,red triangle on the right and at least one blue object and arbitrary objects,False
+12/0008.png,12,1,0.7950661182403564,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0009.png,12,0,0.019317058846354485,0,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0010.png,12,0,0.0009604553342796862,0,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0011.png,12,1,0.941093385219574,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0012.png,12,1,0.9387296438217163,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0013.png,12,0,0.09586035460233688,0,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0014.png,12,1,0.999982476234436,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0015.png,12,1,0.8389933705329895,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0016.png,12,0,0.00027433669310994446,0,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0017.png,12,1,0.9508626461029053,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0018.png,12,1,0.9978402853012085,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0019.png,12,1,0.9981054067611694,1,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0020.png,12,0,0.0009373271022923291,0,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0021.png,12,0,0.7287363409996033,1,red triangle on the right and at least one blue object and arbitrary objects,False
+12/0022.png,12,1,0.134494811296463,0,red triangle on the right and at least one blue object and arbitrary objects,False
+12/0023.png,12,0,0.00289012654684484,0,red triangle on the right and at least one blue object and arbitrary objects,True
+12/0024.png,12,0,0.906515896320343,1,red triangle on the right and at least one blue object and arbitrary objects,False
+13/0000.png,13,0,0.053155042231082916,0,"triangle and square, same color",True
+13/0001.png,13,1,0.7524360418319702,1,"triangle and square, same color",True
+13/0002.png,13,1,0.14806199073791504,0,"triangle and square, same color",False
+13/0003.png,13,1,0.1311909556388855,0,"triangle and square, same color",False
+13/0004.png,13,1,0.2455843985080719,0,"triangle and square, same color",False
+13/0005.png,13,1,0.9451344609260559,1,"triangle and square, same color",True
+13/0006.png,13,1,0.9846494793891907,1,"triangle and square, same color",True
+13/0007.png,13,1,0.9994838237762451,1,"triangle and square, same color",True
+13/0008.png,13,0,0.990071177482605,1,"triangle and square, same color",False
+13/0009.png,13,1,0.971718966960907,1,"triangle and square, same color",True
+13/0010.png,13,1,0.9966996312141418,1,"triangle and square, same color",True
+13/0011.png,13,1,0.20188504457473755,0,"triangle and square, same color",False
+13/0012.png,13,1,0.40805622935295105,0,"triangle and square, same color",False
+13/0013.png,13,0,0.30750343203544617,0,"triangle and square, same color",True
+13/0014.png,13,0,0.9986732006072998,1,"triangle and square, same color",False
+13/0015.png,13,0,0.03605090454220772,0,"triangle and square, same color",True
+13/0016.png,13,1,0.8088528513908386,1,"triangle and square, same color",True
+13/0017.png,13,1,0.8697879314422607,1,"triangle and square, same color",True
+13/0018.png,13,1,0.6106393337249756,1,"triangle and square, same color",True
+13/0019.png,13,1,0.9657835960388184,1,"triangle and square, same color",True
+13/0020.png,13,0,0.10407523810863495,0,"triangle and square, same color",True
+13/0021.png,13,0,0.07187532633543015,0,"triangle and square, same color",True
+13/0022.png,13,0,0.4322420656681061,0,"triangle and square, same color",True
+13/0023.png,13,1,0.4401778280735016,0,"triangle and square, same color",False
+13/0024.png,13,1,0.9175949692726135,1,"triangle and square, same color",True
+14/0000.png,14,0,0.4998628795146942,0,palindrome aba,True
+14/0001.png,14,0,0.43392646312713623,0,palindrome aba,True
+14/0002.png,14,0,0.6652935743331909,1,palindrome aba,False
+14/0003.png,14,0,0.9319028258323669,1,palindrome aba,False
+14/0004.png,14,1,0.7646884918212891,1,palindrome aba,True
+14/0005.png,14,0,0.2436710000038147,0,palindrome aba,True
+14/0006.png,14,0,0.570671558380127,1,palindrome aba,False
+14/0007.png,14,0,0.6896569132804871,1,palindrome aba,False
+14/0008.png,14,1,0.9297536015510559,1,palindrome aba,True
+14/0009.png,14,0,0.48269525170326233,0,palindrome aba,True
+14/0010.png,14,0,0.17679688334465027,0,palindrome aba,True
+14/0011.png,14,1,0.41474929451942444,0,palindrome aba,False
+14/0012.png,14,1,0.7362862825393677,1,palindrome aba,True
+14/0013.png,14,1,0.6266633868217468,1,palindrome aba,True
+14/0014.png,14,0,0.021614817902445793,0,palindrome aba,True
+14/0015.png,14,1,0.7107444405555725,1,palindrome aba,True
+14/0016.png,14,0,0.2834399342536926,0,palindrome aba,True
+14/0017.png,14,0,0.1203351840376854,0,palindrome aba,True
+14/0018.png,14,1,0.8241766095161438,1,palindrome aba,True
+14/0019.png,14,1,0.7598323225975037,1,palindrome aba,True
+14/0020.png,14,1,0.4931567311286926,0,palindrome aba,False
+14/0021.png,14,1,0.3855991065502167,0,palindrome aba,False
+14/0022.png,14,0,0.7837216258049011,1,palindrome aba,False
+14/0023.png,14,1,0.22149211168289185,0,palindrome aba,False
+14/0024.png,14,1,0.04255596920847893,0,palindrome aba,False
+15/0000.png,15,0,0.059147726744413376,0,house,True
+15/0001.png,15,0,0.22917304933071136,0,house,True
+15/0002.png,15,0,0.030936628580093384,0,house,True
+15/0003.png,15,0,0.17546188831329346,0,house,True
+15/0004.png,15,0,0.0280440803617239,0,house,True
+15/0005.png,15,0,0.0013969091232866049,0,house,True
+15/0006.png,15,1,0.7854490876197815,1,house,True
+15/0007.png,15,0,0.9974384307861328,1,house,False
+15/0008.png,15,0,0.19692416489124298,0,house,True
+15/0009.png,15,1,0.9341393709182739,1,house,True
+15/0010.png,15,1,0.6892396807670593,1,house,True
+15/0011.png,15,0,0.2579747140407562,0,house,True
+15/0012.png,15,1,0.9826673865318298,1,house,True
+15/0013.png,15,0,0.9872653484344482,1,house,False
+15/0014.png,15,0,0.035219982266426086,0,house,True
+15/0015.png,15,0,0.17800085246562958,0,house,True
+15/0016.png,15,1,0.669113039970398,1,house,True
+15/0017.png,15,1,0.8067883253097534,1,house,True
+15/0018.png,15,1,0.9892020225524902,1,house,True
+15/0019.png,15,0,0.9010279178619385,1,house,False
+15/0020.png,15,0,0.9557135105133057,1,house,False
+15/0021.png,15,0,0.12136784940958023,0,house,True
+15/0022.png,15,0,0.9942003488540649,1,house,False
+15/0023.png,15,1,0.7532167434692383,1,house,True
+15/0024.png,15,0,0.9953522682189941,1,house,False
+16/0000.png,16,0,0.26422616839408875,0,car,True
+16/0001.png,16,1,0.05580851435661316,0,car,False
+16/0002.png,16,0,0.21947604417800903,0,car,True
+16/0003.png,16,0,0.003874376881867647,0,car,True
+16/0004.png,16,0,0.007465182337909937,0,car,True
+16/0005.png,16,0,0.0031261544208973646,0,car,True
+16/0006.png,16,0,0.2081487625837326,0,car,True
+16/0007.png,16,0,0.01763407699763775,0,car,True
+16/0008.png,16,0,0.056266333907842636,0,car,True
+16/0009.png,16,0,0.001496465178206563,0,car,True
+16/0010.png,16,0,0.2835579216480255,0,car,True
+16/0011.png,16,0,0.9082868099212646,1,car,False
+16/0012.png,16,1,0.5901287198066711,1,car,True
+16/0013.png,16,0,0.7613890767097473,1,car,False
+16/0014.png,16,1,0.5267112851142883,1,car,True
+16/0015.png,16,1,0.9643674492835999,1,car,True
+16/0016.png,16,1,0.9180892109870911,1,car,True
+16/0017.png,16,0,0.005198501516133547,0,car,True
+16/0018.png,16,1,0.9600238800048828,1,car,True
+16/0019.png,16,1,0.9957172274589539,1,car,True
+16/0020.png,16,0,0.023660842329263687,0,car,True
+16/0021.png,16,1,0.8322725892066956,1,car,True
+16/0022.png,16,0,0.2854727804660797,0,car,True
+16/0023.png,16,1,0.9038615226745605,1,car,True
+16/0024.png,16,1,0.3195916712284088,0,car,False
+17/0000.png,17,0,0.99176424741745,1,tower,False
+17/0001.png,17,0,4.2202998884022236e-05,0,tower,True
+17/0002.png,17,0,5.292988589644665e-06,0,tower,True
+17/0003.png,17,1,0.9992249011993408,1,tower,True
+17/0004.png,17,0,0.005996193271130323,0,tower,True
+17/0005.png,17,1,0.9995406866073608,1,tower,True
+17/0006.png,17,0,0.0004729310458060354,0,tower,True
+17/0007.png,17,0,7.677592657273635e-05,0,tower,True
+17/0008.png,17,0,1.6830997992656194e-05,0,tower,True
+17/0009.png,17,1,0.9786755442619324,1,tower,True
+17/0010.png,17,1,0.999901533126831,1,tower,True
+17/0011.png,17,0,0.9665016531944275,1,tower,False
+17/0012.png,17,1,0.9997270703315735,1,tower,True
+17/0013.png,17,0,0.0064703249372541904,0,tower,True
+17/0014.png,17,1,0.9400668740272522,1,tower,True
+17/0015.png,17,0,0.29473304748535156,0,tower,True
+17/0016.png,17,1,0.9982126951217651,1,tower,True
+17/0017.png,17,0,0.0004039738269057125,0,tower,True
+17/0018.png,17,0,5.743580686612404e-07,0,tower,True
+17/0019.png,17,0,6.948485861357767e-06,0,tower,True
+17/0020.png,17,0,0.005089222453534603,0,tower,True
+17/0021.png,17,1,0.999455988407135,1,tower,True
+17/0022.png,17,0,0.002486281329765916,0,tower,True
+17/0023.png,17,0,1.6319674614351243e-05,0,tower,True
+17/0024.png,17,0,7.559278310509399e-05,0,tower,True
+18/0000.png,18,1,0.9789605140686035,1,wagon,True
+18/0001.png,18,1,0.9724775552749634,1,wagon,True
+18/0002.png,18,1,0.8936079740524292,1,wagon,True
+18/0003.png,18,0,0.4818497896194458,0,wagon,True
+18/0004.png,18,1,0.944469153881073,1,wagon,True
+18/0005.png,18,1,0.9989185333251953,1,wagon,True
+18/0006.png,18,0,0.0012939557200297713,0,wagon,True
+18/0007.png,18,1,0.944656491279602,1,wagon,True
+18/0008.png,18,1,0.9998577833175659,1,wagon,True
+18/0009.png,18,0,0.3019649386405945,0,wagon,True
+18/0010.png,18,0,0.01660020463168621,0,wagon,True
+18/0011.png,18,0,0.04928658902645111,0,wagon,True
+18/0012.png,18,1,0.9775335192680359,1,wagon,True
+18/0013.png,18,1,0.9981654286384583,1,wagon,True
+18/0014.png,18,1,0.9817103743553162,1,wagon,True
+18/0015.png,18,1,0.9952266216278076,1,wagon,True
+18/0016.png,18,1,0.9996497631072998,1,wagon,True
+18/0017.png,18,0,3.118614404229447e-05,0,wagon,True
+18/0018.png,18,0,0.00022436800645664334,0,wagon,True
+18/0019.png,18,0,0.9120790362358093,1,wagon,False
+18/0020.png,18,1,0.9836156964302063,1,wagon,True
+18/0021.png,18,1,0.9996196031570435,1,wagon,True
+18/0022.png,18,0,0.824161946773529,1,wagon,False
+18/0023.png,18,1,0.8594247102737427,1,wagon,True
+18/0024.png,18,1,0.9989476799964905,1,wagon,True
+19/0000.png,19,0,9.056147973751649e-07,0,traffic light,True
+19/0001.png,19,0,0.00018351718608755618,0,traffic light,True
+19/0002.png,19,0,0.0004720984725281596,0,traffic light,True
+19/0003.png,19,0,0.03665267676115036,0,traffic light,True
+19/0004.png,19,0,7.292085501831025e-05,0,traffic light,True
+19/0005.png,19,0,0.0002913522766903043,0,traffic light,True
+19/0006.png,19,0,0.901326596736908,1,traffic light,False
+19/0007.png,19,1,0.8941466212272644,1,traffic light,True
+19/0008.png,19,0,0.000868039729539305,0,traffic light,True
+19/0009.png,19,0,0.046419061720371246,0,traffic light,True
+19/0010.png,19,0,0.00012659572530537844,0,traffic light,True
+19/0011.png,19,0,3.484254193608649e-06,0,traffic light,True
+19/0012.png,19,0,0.46256881952285767,0,traffic light,True
+19/0013.png,19,0,0.0013245309237390757,0,traffic light,True
+19/0014.png,19,0,0.009993444196879864,0,traffic light,True
+19/0015.png,19,1,0.9976340532302856,1,traffic light,True
+19/0016.png,19,0,0.08326306939125061,0,traffic light,True
+19/0017.png,19,0,0.00045406571007333696,0,traffic light,True
+19/0018.png,19,0,0.0027859993278980255,0,traffic light,True
+19/0019.png,19,0,0.026796992868185043,0,traffic light,True
+19/0020.png,19,0,0.0017001007217913866,0,traffic light,True
+19/0021.png,19,0,0.0025113511364907026,0,traffic light,True
+19/0022.png,19,1,0.9963017702102661,1,traffic light,True
+19/0023.png,19,0,0.049349188804626465,0,traffic light,True
+19/0024.png,19,0,0.03971533849835396,0,traffic light,True

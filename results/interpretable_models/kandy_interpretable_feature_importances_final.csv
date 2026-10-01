@@ -1,57 +1,24 @@
 task_id,task,model,term,importance_signed,importance_abs
-0,triangle vs any,logistic,n_objects,0.15158221278719697,0.15158221278719697
-0,triangle vs any,logistic,count_shape_triangle,1.7289867409339714,1.7289867409339714
-0,triangle vs any,logistic,mean_x_triangle,0.3297886136380605,0.3297886136380605
-0,triangle vs any,logistic,mean_y_triangle,-0.26419795198051216,0.26419795198051216
-0,triangle vs any,logistic,count_shape_square,-0.8999734552489173,0.8999734552489173
-0,triangle vs any,logistic,mean_x_square,-0.09040550439750958,0.09040550439750958
-0,triangle vs any,logistic,mean_y_square,0.2832292465126675,0.2832292465126675
-0,triangle vs any,logistic,count_shape_circle,-0.9418920000426536,0.9418920000426536
-0,triangle vs any,logistic,mean_x_circle,-0.1703557560359541,0.1703557560359541
-0,triangle vs any,logistic,mean_y_circle,0.1503216916769033,0.1503216916769033
-0,triangle vs any,logistic,count_color_red,0.0011697860065429115,0.0011697860065429115
-0,triangle vs any,logistic,count_color_green,-0.08906087337596613,0.08906087337596613
-0,triangle vs any,logistic,count_color_blue,0.138294209818687,0.138294209818687
-0,triangle vs any,logistic,count_color_cyan,0.13250375159261873,0.13250375159261873
-0,triangle vs any,logistic,count_color_magenta,0.05349298046047321,0.05349298046047321
-0,triangle vs any,logistic,count_color_yellow,-0.09651846632341408,0.09651846632341408
-0,triangle vs any,logistic,count_size_small,0.0703228321186946,0.0703228321186946
-0,triangle vs any,logistic,count_size_large,0.04103873415857101,0.04103873415857101
-0,triangle vs any,logistic,mean_x_all,0.07212182976771409,0.07212182976771409
-0,triangle vs any,logistic,mean_y_all,0.04412625873619049,0.04412625873619049
-0,triangle vs any,logistic,std_x_all,0.0,0.0
-0,triangle vs any,logistic,std_y_all,0.0,0.0
-0,triangle vs any,logistic,pair_left_right,0.0,0.0
-0,triangle vs any,logistic,pair_above_below,0.0,0.0
-0,triangle vs any,logistic,pair_diagonal,0.0,0.0
-0,triangle vs any,logistic,pair_same_shape,0.0,0.0
-0,triangle vs any,logistic,pair_same_color,0.0,0.0
-0,triangle vs any,logistic,pair_same_size,0.0,0.0
-0,triangle vs any,logistic,pair_horiz_aligned,0.0,0.0
-0,triangle vs any,logistic,pair_vert_aligned,0.0,0.0
-0,triangle vs any,logistic,pair_close,0.0,0.0
-0,triangle vs any,tree,n_objects,0.016563146997932054,0.016563146997932054
-0,triangle vs any,tree,count_shape_triangle,0.983436853002068,0.983436853002068
-0,triangle vs any,ebm,count_shape_triangle,,2.1535605150755543
-0,triangle vs any,ebm,count_shape_circle,,1.730513738875308
-0,triangle vs any,ebm,count_shape_square,,1.6563827054302784
-0,triangle vs any,ebm,mean_y_triangle,,0.6379667317429368
-0,triangle vs any,ebm,mean_y_square,,0.6338208001080499
-0,triangle vs any,ebm,mean_x_triangle,,0.5676049297971709
-0,triangle vs any,ebm,mean_x_square,,0.5557967837474093
-0,triangle vs any,ebm,mean_y_circle,,0.5256288997993308
-0,triangle vs any,ebm,mean_x_circle,,0.5168216294850435
-0,triangle vs any,ebm,count_color_blue,,0.34039929617170855
-0,triangle vs any,ebm,mean_x_all,,0.30109841828712375
-0,triangle vs any,ebm,count_color_green,,0.15334642217468505
-0,triangle vs any,ebm,n_objects,,0.14295953966165983
-0,triangle vs any,ebm,mean_y_all,,0.14234744990545134
-0,triangle vs any,ebm,count_color_cyan,,0.08386439140754232
-0,triangle vs any,ebm,count_size_small,,0.047774686597018834
-0,triangle vs any,ebm,count_size_large,,0.0471593179278214
-0,triangle vs any,ebm,count_color_yellow,,0.04052537320683623
-0,triangle vs any,ebm,count_color_magenta,,0.02718719396739221
-0,triangle vs any,ebm,count_color_red,,0.0036657309375385853
+0,triangle vs any,ebm,count_shape_triangle,,3.7254586598356134
+0,triangle vs any,ebm,count_shape_circle,,0.8793466208067664
+0,triangle vs any,ebm,count_shape_square,,0.8502341853537434
+0,triangle vs any,ebm,mean_y_triangle,,0.6994245892204881
+0,triangle vs any,ebm,mean_x_triangle,,0.5760115383869474
+0,triangle vs any,ebm,mean_x_square,,0.5136342822367997
+0,triangle vs any,ebm,mean_y_square,,0.5014661467121831
+0,triangle vs any,ebm,mean_x_all,,0.4962844547612625
+0,triangle vs any,ebm,mean_x_circle,,0.49494768546893075
+0,triangle vs any,ebm,mean_y_circle,,0.49335720100990405
+0,triangle vs any,ebm,count_color_green,,0.14761401156430914
+0,triangle vs any,ebm,mean_y_all,,0.1329836373661784
+0,triangle vs any,ebm,count_color_blue,,0.12368053986982971
+0,triangle vs any,ebm,count_size_small,,0.043691890305801166
+0,triangle vs any,ebm,count_size_large,,0.04364301864461873
+0,triangle vs any,ebm,count_color_red,,0.042093631863572886
+0,triangle vs any,ebm,count_color_magenta,,0.014383656826917567
+0,triangle vs any,ebm,count_color_yellow,,0.014329046924496151
+0,triangle vs any,ebm,count_color_cyan,,0.00566713088844658
+0,triangle vs any,ebm,n_objects,,0.0
 0,triangle vs any,ebm,std_x_all,,0.0
 0,triangle vs any,ebm,std_y_all,,0.0
 0,triangle vs any,ebm,pair_left_right,,0.0
@@ -68,290 +35,183 @@ task_id,task,model,term,importance_signed,importance_abs
 0,triangle vs any,ebm,pair_horiz_aligned & pair_vert_aligned,,0.0
 0,triangle vs any,ebm,pair_horiz_aligned & pair_close,,0.0
 0,triangle vs any,ebm,pair_vert_aligned & pair_close,,0.0
-9,red triangle on the right,logistic,n_objects,-0.18418755339347465,0.18418755339347465
-9,red triangle on the right,logistic,count_shape_triangle,0.5517575079021019,0.5517575079021019
-9,red triangle on the right,logistic,mean_x_triangle,0.7033638986579548,0.7033638986579548
-9,red triangle on the right,logistic,mean_y_triangle,0.027615830372717972,0.027615830372717972
-9,red triangle on the right,logistic,count_shape_square,-0.5735932614649695,0.5735932614649695
-9,red triangle on the right,logistic,mean_x_square,-0.7363781923908315,0.7363781923908315
-9,red triangle on the right,logistic,mean_y_square,0.0,0.0
-9,red triangle on the right,logistic,count_shape_circle,-0.21388179074725916,0.21388179074725916
-9,red triangle on the right,logistic,mean_x_circle,-0.3850832453127409,0.3850832453127409
-9,red triangle on the right,logistic,mean_y_circle,0.0,0.0
-9,red triangle on the right,logistic,count_color_red,1.4653225839239177,1.4653225839239177
-9,red triangle on the right,logistic,count_color_green,-0.7208576427588951,0.7208576427588951
-9,red triangle on the right,logistic,count_color_blue,-0.18129452339866897,0.18129452339866897
-9,red triangle on the right,logistic,count_color_cyan,-0.5859842294523135,0.5859842294523135
-9,red triangle on the right,logistic,count_color_magenta,-0.27950025290499075,0.27950025290499075
-9,red triangle on the right,logistic,count_color_yellow,-0.44985253422893623,0.44985253422893623
-9,red triangle on the right,logistic,count_size_small,0.298859058414795,0.298859058414795
-9,red triangle on the right,logistic,count_size_large,-0.44144058002487857,0.44144058002487857
-9,red triangle on the right,logistic,mean_x_all,-0.444216984569667,0.444216984569667
-9,red triangle on the right,logistic,mean_y_all,0.1489756048383653,0.1489756048383653
-9,red triangle on the right,logistic,std_x_all,-0.25290059165824247,0.25290059165824247
-9,red triangle on the right,logistic,std_y_all,0.4517085201643862,0.4517085201643862
-9,red triangle on the right,logistic,pair_left_right,-0.2541407152297747,0.2541407152297747
-9,red triangle on the right,logistic,pair_above_below,0.0,0.0
-9,red triangle on the right,logistic,pair_diagonal,0.0,0.0
-9,red triangle on the right,logistic,pair_same_shape,0.14252756838519134,0.14252756838519134
-9,red triangle on the right,logistic,pair_same_color,-0.27051106183419943,0.27051106183419943
-9,red triangle on the right,logistic,pair_same_size,-0.5382598999369754,0.5382598999369754
-9,red triangle on the right,logistic,pair_horiz_aligned,-0.25414071522977466,0.25414071522977466
-9,red triangle on the right,logistic,pair_vert_aligned,0.0,0.0
-9,red triangle on the right,logistic,pair_close,0.0,0.0
-9,red triangle on the right,tree,mean_x_triangle,0.20243588439069674,0.20243588439069674
-9,red triangle on the right,tree,count_shape_square,0.1522080587308791,0.1522080587308791
-9,red triangle on the right,tree,count_color_red,0.516825361059758,0.516825361059758
-9,red triangle on the right,tree,count_size_large,0.014892169079568692,0.014892169079568692
-9,red triangle on the right,tree,std_x_all,0.11363852673909762,0.11363852673909762
-9,red triangle on the right,ebm,count_color_red,,1.0138188902279281
-9,red triangle on the right,ebm,mean_x_square,,0.88393764352864
-9,red triangle on the right,ebm,count_size_large,,0.6185361420531249
-9,red triangle on the right,ebm,mean_x_triangle,,0.5288772701441187
-9,red triangle on the right,ebm,count_color_green,,0.5255723927713201
-9,red triangle on the right,ebm,count_color_cyan,,0.4007620945659468
-9,red triangle on the right,ebm,count_color_yellow,,0.38805383448064534
-9,red triangle on the right,ebm,mean_x_circle,,0.31722957161516946
-9,red triangle on the right,ebm,count_color_red & std_x_all,,0.31498809895157803
-9,red triangle on the right,ebm,count_color_magenta,,0.3061718387888993
-9,red triangle on the right,ebm,count_shape_square,,0.2869285163444927
-9,red triangle on the right,ebm,count_shape_circle,,0.2585728301730482
-9,red triangle on the right,ebm,count_color_red & count_size_small,,0.2550537720750715
-9,red triangle on the right,ebm,count_shape_square & count_color_red,,0.24152053523538672
-9,red triangle on the right,ebm,count_color_red & std_y_all,,0.23710994173041278
-9,red triangle on the right,ebm,count_color_red & mean_y_all,,0.22198295575783342
-9,red triangle on the right,ebm,std_y_all,,0.20768292185130507
-9,red triangle on the right,ebm,count_shape_triangle,,0.17991676758261926
-9,red triangle on the right,ebm,count_color_blue,,0.16542398063467167
-9,red triangle on the right,ebm,mean_y_all,,0.14802304551291134
-9,red triangle on the right,ebm,std_x_all,,0.14016840350377804
-9,red triangle on the right,ebm,mean_x_all,,0.13734967074884558
-9,red triangle on the right,ebm,pair_same_size,,0.13231606389847417
-9,red triangle on the right,ebm,pair_left_right,,0.09119792245745334
-9,red triangle on the right,ebm,pair_horiz_aligned,,0.09110932316954658
-9,red triangle on the right,ebm,mean_y_triangle,,0.08354550251835072
-9,red triangle on the right,ebm,n_objects,,0.07890591035006293
-9,red triangle on the right,ebm,count_size_small,,0.05760691514570737
-9,red triangle on the right,ebm,pair_same_shape,,0.0442106580332229
-9,red triangle on the right,ebm,pair_same_color,,0.027524630464333358
+2,circle vs any,ebm,count_shape_circle,,1.53662940017607
+2,circle vs any,ebm,count_shape_triangle,,0.9981126513422556
+2,circle vs any,ebm,count_size_large,,0.9879418599722345
+2,circle vs any,ebm,count_color_red,,0.7186726963569348
+2,circle vs any,ebm,mean_y_circle,,0.6984991644027897
+2,circle vs any,ebm,mean_x_all,,0.6621349654679597
+2,circle vs any,ebm,count_color_green,,0.5715165078460762
+2,circle vs any,ebm,count_color_cyan,,0.5655646909115912
+2,circle vs any,ebm,mean_y_square,,0.44206925628218235
+2,circle vs any,ebm,mean_x_triangle,,0.4224532832117171
+2,circle vs any,ebm,mean_y_triangle,,0.4132797427633017
+2,circle vs any,ebm,mean_x_circle,,0.37906707550991453
+2,circle vs any,ebm,mean_x_all & mean_y_all,,0.2763266357746109
+2,circle vs any,ebm,count_shape_square & mean_y_all,,0.2148513765844839
+2,circle vs any,ebm,mean_x_square,,0.1988588833915905
+2,circle vs any,ebm,count_size_small & mean_x_all,,0.1824785624226544
+2,circle vs any,ebm,count_shape_square,,0.13216305196080835
+2,circle vs any,ebm,count_color_blue,,0.11767262442078871
+2,circle vs any,ebm,mean_y_all,,0.107498353758328
+2,circle vs any,ebm,count_size_small,,0.07348735448504462
+2,circle vs any,ebm,count_color_yellow,,0.06990905035184575
+2,circle vs any,ebm,count_color_magenta,,0.04789627262475764
+2,circle vs any,ebm,count_size_small & mean_y_all,,0.03208173816174614
+2,circle vs any,ebm,n_objects,,0.01803997104841519
+2,circle vs any,ebm,std_x_all,,0.0
+2,circle vs any,ebm,std_y_all,,0.0
+2,circle vs any,ebm,pair_left_right,,0.0
+2,circle vs any,ebm,pair_above_below,,0.0
+2,circle vs any,ebm,pair_same_size,,0.0
+2,circle vs any,ebm,pair_same_color,,0.0
+2,circle vs any,ebm,pair_same_shape,,0.0
+2,circle vs any,ebm,pair_diagonal,,0.0
+2,circle vs any,ebm,pair_close,,0.0
+2,circle vs any,ebm,pair_vert_aligned,,0.0
+2,circle vs any,ebm,pair_horiz_aligned,,0.0
+2,circle vs any,ebm,pair_vert_aligned & pair_close,,0.0
+9,red triangle on the right,ebm,count_color_red,,5.50805023721128
+9,red triangle on the right,ebm,mean_y_all,,1.4672005298072663
+9,red triangle on the right,ebm,count_size_large,,1.4482437312207441
+9,red triangle on the right,ebm,count_shape_square,,1.40556652803668
+9,red triangle on the right,ebm,mean_y_triangle,,1.3757854705670245
+9,red triangle on the right,ebm,mean_x_triangle,,1.3554835394856237
+9,red triangle on the right,ebm,std_x_all,,1.3468290787862047
+9,red triangle on the right,ebm,count_size_small,,1.3386689872024349
+9,red triangle on the right,ebm,mean_x_all,,0.9001667175670689
+9,red triangle on the right,ebm,count_color_green,,0.6236726799423394
+9,red triangle on the right,ebm,mean_x_square,,0.5473640767019168
+9,red triangle on the right,ebm,count_shape_triangle,,0.520716892762592
+9,red triangle on the right,ebm,n_objects,,0.5174151368246225
+9,red triangle on the right,ebm,pair_left_right,,0.5173514845297289
+9,red triangle on the right,ebm,pair_horiz_aligned,,0.5170363467164811
+9,red triangle on the right,ebm,count_color_cyan,,0.49328909224851375
+9,red triangle on the right,ebm,mean_x_circle,,0.38774643327775066
+9,red triangle on the right,ebm,count_color_magenta,,0.351586211270856
+9,red triangle on the right,ebm,count_color_yellow,,0.31203910828530823
+9,red triangle on the right,ebm,count_color_blue,,0.30469173524344717
+9,red triangle on the right,ebm,count_shape_circle,,0.2534734589247546
+9,red triangle on the right,ebm,pair_same_size,,0.15786213440870248
+9,red triangle on the right,ebm,mean_y_triangle & pair_same_size,,0.1483216583630817
+9,red triangle on the right,ebm,count_size_small & mean_y_all,,0.14676369718142693
+9,red triangle on the right,ebm,count_size_large & mean_y_all,,0.14630494797185659
+9,red triangle on the right,ebm,mean_y_triangle & count_size_large,,0.14389479552791884
+9,red triangle on the right,ebm,mean_y_all & pair_same_size,,0.12769775494513214
+9,red triangle on the right,ebm,std_y_all,,0.08085025709232475
+9,red triangle on the right,ebm,pair_same_shape,,0.0789607900364396
+9,red triangle on the right,ebm,pair_same_color,,0.0042125365931128785
 9,red triangle on the right,ebm,mean_y_square,,0.0
 9,red triangle on the right,ebm,mean_y_circle,,0.0
 9,red triangle on the right,ebm,pair_diagonal,,0.0
 9,red triangle on the right,ebm,pair_above_below,,0.0
 9,red triangle on the right,ebm,pair_close,,0.0
 9,red triangle on the right,ebm,pair_vert_aligned,,0.0
-13,"triangle and square, same color",logistic,n_objects,-0.1943561226514739,0.1943561226514739
-13,"triangle and square, same color",logistic,count_shape_triangle,0.5273992361430488,0.5273992361430488
-13,"triangle and square, same color",logistic,mean_x_triangle,-0.0978689875105452,0.0978689875105452
-13,"triangle and square, same color",logistic,mean_y_triangle,0.18594629496716764,0.18594629496716764
-13,"triangle and square, same color",logistic,count_shape_square,-0.00964035745910234,0.00964035745910234
-13,"triangle and square, same color",logistic,mean_x_square,0.14740336911065685,0.14740336911065685
-13,"triangle and square, same color",logistic,mean_y_square,-0.36604391978844303,0.36604391978844303
-13,"triangle and square, same color",logistic,count_shape_circle,-0.9221872044540131,0.9221872044540131
-13,"triangle and square, same color",logistic,mean_x_circle,-0.6379506901919005,0.6379506901919005
-13,"triangle and square, same color",logistic,mean_y_circle,0.2741275215426504,0.2741275215426504
-13,"triangle and square, same color",logistic,count_color_red,-0.6042187611440555,0.6042187611440555
-13,"triangle and square, same color",logistic,count_color_green,0.584269034120796,0.584269034120796
-13,"triangle and square, same color",logistic,count_color_blue,0.19984914846758717,0.19984914846758717
-13,"triangle and square, same color",logistic,count_color_cyan,-0.3396264715616997,0.3396264715616997
-13,"triangle and square, same color",logistic,count_color_magenta,-0.22106269639296497,0.22106269639296497
-13,"triangle and square, same color",logistic,count_color_yellow,0.14500003117266172,0.14500003117266172
-13,"triangle and square, same color",logistic,count_size_small,-0.32567581513728805,0.32567581513728805
-13,"triangle and square, same color",logistic,count_size_large,0.18631495542438584,0.18631495542438584
-13,"triangle and square, same color",logistic,mean_x_all,0.3391691493752342,0.3391691493752342
-13,"triangle and square, same color",logistic,mean_y_all,0.4264425814363495,0.4264425814363495
-13,"triangle and square, same color",logistic,std_x_all,-0.30335664246579364,0.30335664246579364
-13,"triangle and square, same color",logistic,std_y_all,0.032782418104617024,0.032782418104617024
-13,"triangle and square, same color",logistic,pair_left_right,-0.31617013213969725,0.31617013213969725
-13,"triangle and square, same color",logistic,pair_above_below,-0.10080178361327712,0.10080178361327712
-13,"triangle and square, same color",logistic,pair_diagonal,-0.3594437130675364,0.3594437130675364
-13,"triangle and square, same color",logistic,pair_same_shape,-0.8366968765213487,0.8366968765213487
-13,"triangle and square, same color",logistic,pair_same_color,1.7197533663985176,1.7197533663985176
-13,"triangle and square, same color",logistic,pair_same_size,0.7975237725905433,0.7975237725905433
-13,"triangle and square, same color",logistic,pair_horiz_aligned,-0.08604372367442209,0.08604372367442209
-13,"triangle and square, same color",logistic,pair_vert_aligned,0.15474752098323405,0.15474752098323405
-13,"triangle and square, same color",logistic,pair_close,-0.47853774400916993,0.47853774400916993
-13,"triangle and square, same color",tree,n_objects,0.1355151806949796,0.1355151806949796
-13,"triangle and square, same color",tree,count_shape_triangle,0.07813228768056281,0.07813228768056281
-13,"triangle and square, same color",tree,mean_y_triangle,0.08406672600253362,0.08406672600253362
-13,"triangle and square, same color",tree,std_y_all,0.3915610247571265,0.3915610247571265
-13,"triangle and square, same color",tree,pair_same_color,0.31072478086479755,0.31072478086479755
-13,"triangle and square, same color",ebm,std_y_all & pair_same_color,,0.9976407527093285
-13,"triangle and square, same color",ebm,count_shape_circle,,0.6123912873362927
-13,"triangle and square, same color",ebm,pair_same_shape,,0.5594873677646716
-13,"triangle and square, same color",ebm,mean_y_square & mean_y_all,,0.47837349305840593
-13,"triangle and square, same color",ebm,mean_x_circle,,0.4551031631922382
-13,"triangle and square, same color",ebm,pair_same_color,,0.44842375838075504
-13,"triangle and square, same color",ebm,mean_x_triangle & count_size_large,,0.43792420215232414
-13,"triangle and square, same color",ebm,mean_y_circle,,0.4130507012822355
-13,"triangle and square, same color",ebm,count_color_green,,0.3628311090666494
-13,"triangle and square, same color",ebm,count_color_red,,0.36121341365504867
-13,"triangle and square, same color",ebm,count_shape_triangle,,0.2723136833343611
-13,"triangle and square, same color",ebm,mean_y_triangle & mean_y_square,,0.26504393474807264
-13,"triangle and square, same color",ebm,count_shape_square,,0.2419934320942148
-13,"triangle and square, same color",ebm,pair_same_size,,0.2393294783350787
-13,"triangle and square, same color",ebm,mean_y_all,,0.23765588258478576
-13,"triangle and square, same color",ebm,count_size_small,,0.22820331328805538
-13,"triangle and square, same color",ebm,pair_diagonal,,0.22469512845509837
-13,"triangle and square, same color",ebm,count_color_blue,,0.21533869727870208
-13,"triangle and square, same color",ebm,count_color_yellow,,0.20080271787071627
-13,"triangle and square, same color",ebm,count_color_magenta,,0.19035375878729294
-13,"triangle and square, same color",ebm,count_color_cyan,,0.1664425535897552
-13,"triangle and square, same color",ebm,mean_y_triangle & pair_same_color,,0.16527299944882254
-13,"triangle and square, same color",ebm,pair_close,,0.14325941437053483
-13,"triangle and square, same color",ebm,mean_x_triangle,,0.13591608242208422
-13,"triangle and square, same color",ebm,mean_x_all,,0.11900342044499534
-13,"triangle and square, same color",ebm,pair_left_right,,0.10939280322372097
-13,"triangle and square, same color",ebm,mean_x_square,,0.09734660404706832
-13,"triangle and square, same color",ebm,mean_y_triangle,,0.07374631848857485
-13,"triangle and square, same color",ebm,pair_vert_aligned,,0.061974227643279464
-13,"triangle and square, same color",ebm,n_objects,,0.058021519216257464
-13,"triangle and square, same color",ebm,mean_y_square,,0.05674074693634847
-13,"triangle and square, same color",ebm,std_x_all,,0.04832951034183169
-13,"triangle and square, same color",ebm,std_y_all,,0.0476303669547428
-13,"triangle and square, same color",ebm,pair_horiz_aligned,,0.03803119266892535
-13,"triangle and square, same color",ebm,pair_above_below,,0.03741332700517671
-13,"triangle and square, same color",ebm,count_size_large,,0.0020556894585014376
-15,house,logistic,n_objects,0.3536458593251501,0.3536458593251501
-15,house,logistic,count_shape_triangle,0.6543348725080055,0.6543348725080055
-15,house,logistic,mean_x_triangle,1.069859755274949,1.069859755274949
-15,house,logistic,mean_y_triangle,-0.7877868297660154,0.7877868297660154
-15,house,logistic,count_shape_square,0.3536070404966171,0.3536070404966171
-15,house,logistic,mean_x_square,-0.2050816217197692,0.2050816217197692
-15,house,logistic,mean_y_square,0.6060022062762098,0.6060022062762098
-15,house,logistic,count_shape_circle,-0.8901055687245547,0.8901055687245547
-15,house,logistic,mean_x_circle,0.28149514030622735,0.28149514030622735
-15,house,logistic,mean_y_circle,0.2894005604633765,0.2894005604633765
-15,house,logistic,count_color_red,0.6493057648765835,0.6493057648765835
-15,house,logistic,count_color_green,0.48080513837021654,0.48080513837021654
-15,house,logistic,count_color_blue,-0.18915983344446882,0.18915983344446882
-15,house,logistic,count_color_cyan,-0.15294341454254703,0.15294341454254703
-15,house,logistic,count_color_magenta,-0.29741267853053244,0.29741267853053244
-15,house,logistic,count_color_yellow,-0.027060571129717253,0.027060571129717253
-15,house,logistic,count_size_small,0.3933670314297608,0.3933670314297608
-15,house,logistic,count_size_large,-0.20148147531017216,0.20148147531017216
-15,house,logistic,mean_x_all,0.2873828285367882,0.2873828285367882
-15,house,logistic,mean_y_all,0.2649553218504938,0.2649553218504938
-15,house,logistic,std_x_all,0.0380137504342968,0.0380137504342968
-15,house,logistic,std_y_all,-0.291246904887295,0.291246904887295
-15,house,logistic,pair_left_right,0.0,0.0
-15,house,logistic,pair_above_below,-0.25451023516843985,0.25451023516843985
-15,house,logistic,pair_diagonal,0.0,0.0
-15,house,logistic,pair_same_shape,-1.4935497031130465,1.4935497031130465
-15,house,logistic,pair_same_color,-0.46336434282690303,0.46336434282690303
-15,house,logistic,pair_same_size,0.35605658581163635,0.35605658581163635
-15,house,logistic,pair_horiz_aligned,0.0,0.0
-15,house,logistic,pair_vert_aligned,-0.25451023516844,0.25451023516844
-15,house,logistic,pair_close,-0.0436061323438192,0.0436061323438192
-15,house,tree,mean_x_triangle,0.4745762711864401,0.4745762711864401
-15,house,tree,mean_x_square,1.1126774601991184e-15,1.1126774601991184e-15
-15,house,tree,count_shape_circle,0.24624434721864588,0.24624434721864588
-15,house,tree,mean_y_all,0.018073740862720095,0.018073740862720095
-15,house,tree,std_y_all,0.08483445429151404,0.08483445429151404
-15,house,tree,pair_same_shape,0.17627118644067902,0.17627118644067902
-15,house,ebm,pair_same_shape,,2.029641192242286
-15,house,ebm,count_shape_circle,,1.9108775587108244
-15,house,ebm,count_color_green,,1.116771152391283
-15,house,ebm,mean_x_triangle,,1.088650129121715
-15,house,ebm,mean_y_triangle,,0.8825756635286299
-15,house,ebm,mean_x_all,,0.855654119109077
-15,house,ebm,count_color_red,,0.8485246657011298
-15,house,ebm,mean_y_circle,,0.7395515266260392
-15,house,ebm,mean_y_square,,0.6645384602947668
-15,house,ebm,std_x_all,,0.5439044622058753
-15,house,ebm,count_shape_square,,0.5311850771827551
-15,house,ebm,mean_x_circle,,0.4357457027917775
-15,house,ebm,std_y_all,,0.4108250304582094
-15,house,ebm,count_color_yellow,,0.40968961414200467
-15,house,ebm,count_color_magenta,,0.40678998356951357
-15,house,ebm,mean_y_all,,0.3561596113004494
-15,house,ebm,count_size_large,,0.3148669738700497
-15,house,ebm,count_color_cyan,,0.2964516609518324
-15,house,ebm,count_shape_triangle,,0.2782115351827306
-15,house,ebm,pair_same_color,,0.24337454189832408
-15,house,ebm,n_objects,,0.21893055136305076
-15,house,ebm,count_color_blue,,0.17396035886288222
-15,house,ebm,count_color_magenta & mean_y_all,,0.15663910247299562
-15,house,ebm,count_size_small,,0.1407246845906356
-15,house,ebm,pair_close,,0.13794554696578012
-15,house,ebm,mean_y_triangle & std_y_all,,0.1290742957757478
-15,house,ebm,mean_y_all & std_y_all,,0.1263911670847431
-15,house,ebm,count_size_large & mean_y_all,,0.10799826268452646
-15,house,ebm,mean_x_square,,0.09587950679442371
-15,house,ebm,count_color_magenta & std_y_all,,0.08500841867396657
-15,house,ebm,pair_same_size,,0.07387874106227713
-15,house,ebm,pair_vert_aligned,,0.0699487198204543
-15,house,ebm,pair_above_below,,0.06975227004731985
-15,house,ebm,pair_left_right,,0.0
-15,house,ebm,pair_diagonal,,0.0
-15,house,ebm,pair_horiz_aligned,,0.0
-19,traffic light,logistic,n_objects,0.10365607486632314,0.10365607486632314
-19,traffic light,logistic,count_shape_triangle,0.0,0.0
-19,traffic light,logistic,mean_x_triangle,0.0,0.0
-19,traffic light,logistic,mean_y_triangle,0.0,0.0
-19,traffic light,logistic,count_shape_square,0.10362166600210952,0.10362166600210952
-19,traffic light,logistic,mean_x_square,-0.3502502671640762,0.3502502671640762
-19,traffic light,logistic,mean_y_square,0.2919285996775285,0.2919285996775285
-19,traffic light,logistic,count_shape_circle,0.01833415251594913,0.01833415251594913
-19,traffic light,logistic,mean_x_circle,0.17049185814536924,0.17049185814536924
-19,traffic light,logistic,mean_y_circle,-0.10940528895811807,0.10940528895811807
-19,traffic light,logistic,count_color_red,0.49488425130259345,0.49488425130259345
-19,traffic light,logistic,count_color_green,0.5224447146131882,0.5224447146131882
-19,traffic light,logistic,count_color_blue,-0.7290300667246556,0.7290300667246556
-19,traffic light,logistic,count_color_cyan,-0.5354860403561563,0.5354860403561563
-19,traffic light,logistic,count_color_magenta,-0.5160698961815925,0.5160698961815925
-19,traffic light,logistic,count_color_yellow,0.9281177279026314,0.9281177279026314
-19,traffic light,logistic,count_size_small,0.4774798135046658,0.4774798135046658
-19,traffic light,logistic,count_size_large,-0.38743066230968454,0.38743066230968454
-19,traffic light,logistic,mean_x_all,0.17049185814536916,0.17049185814536916
-19,traffic light,logistic,mean_y_all,-0.12612222145868368,0.12612222145868368
-19,traffic light,logistic,std_x_all,0.1985216021105285,0.1985216021105285
-19,traffic light,logistic,std_y_all,0.1551032684395047,0.1551032684395047
-19,traffic light,logistic,pair_left_right,0.0,0.0
-19,traffic light,logistic,pair_above_below,0.11763765849653508,0.11763765849653508
-19,traffic light,logistic,pair_diagonal,0.0,0.0
-19,traffic light,logistic,pair_same_shape,0.006620857416280523,0.006620857416280523
-19,traffic light,logistic,pair_same_color,-0.7042499750982474,0.7042499750982474
-19,traffic light,logistic,pair_same_size,1.3077158421876478,1.3077158421876478
-19,traffic light,logistic,pair_horiz_aligned,0.0,0.0
-19,traffic light,logistic,pair_vert_aligned,0.11763765849653521,0.11763765849653521
-19,traffic light,logistic,pair_close,0.021202300918491283,0.021202300918491283
-19,traffic light,tree,count_color_yellow,0.23694602896006964,0.23694602896006964
-19,traffic light,tree,pair_same_color,3.192852241567989e-15,3.192852241567989e-15
-19,traffic light,tree,pair_same_size,0.7630539710399271,0.7630539710399271
-19,traffic light,ebm,count_color_blue,,1.7942338089629906
-19,traffic light,ebm,count_color_yellow,,1.524314774163481
-19,traffic light,ebm,count_color_cyan,,1.5089449375270574
-19,traffic light,ebm,pair_same_size,,1.4641311705450801
-19,traffic light,ebm,count_color_green,,0.7882801095596003
-19,traffic light,ebm,count_color_red,,0.6539544954742821
-19,traffic light,ebm,pair_same_color,,0.6474955366611901
-19,traffic light,ebm,count_color_magenta,,0.5206032259341047
-19,traffic light,ebm,pair_above_below,,0.4914591836727519
-19,traffic light,ebm,pair_vert_aligned,,0.49072621375531894
-19,traffic light,ebm,n_objects,,0.48459381867754237
-19,traffic light,ebm,std_y_all,,0.4150978890695903
-19,traffic light,ebm,count_size_small,,0.3410791898297578
-19,traffic light,ebm,count_size_large,,0.31056718611883993
-19,traffic light,ebm,mean_x_all & pair_same_size,,0.2835548578942465
-19,traffic light,ebm,mean_x_square,,0.24918369384249422
-19,traffic light,ebm,count_color_yellow & mean_x_all,,0.24853549521334675
-19,traffic light,ebm,mean_y_circle,,0.245377978247401
-19,traffic light,ebm,pair_same_shape,,0.2075781801407591
-19,traffic light,ebm,count_shape_circle,,0.20564607969840504
-19,traffic light,ebm,pair_close,,0.18720282241452554
-19,traffic light,ebm,count_color_yellow & pair_same_size,,0.18698592685421692
-19,traffic light,ebm,mean_y_all,,0.1819010711435721
-19,traffic light,ebm,std_x_all & pair_same_size,,0.16347878623115714
-19,traffic light,ebm,count_color_yellow & std_x_all,,0.13827599751684425
-19,traffic light,ebm,mean_x_circle,,0.12246062999133966
-19,traffic light,ebm,std_x_all,,0.10367102477109368
-19,traffic light,ebm,mean_x_all,,0.09442389229385906
-19,traffic light,ebm,mean_y_square,,0.058137162179757146
-19,traffic light,ebm,count_shape_square,,0.04431533365735404
-19,traffic light,ebm,count_shape_triangle,,0.0
-19,traffic light,ebm,mean_x_triangle,,0.0
-19,traffic light,ebm,mean_y_triangle,,0.0
-19,traffic light,ebm,pair_left_right,,0.0
-19,traffic light,ebm,pair_diagonal,,0.0
-19,traffic light,ebm,pair_horiz_aligned,,0.0
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_red,,3.329813497055817
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_blue,,2.9214967755639294
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_yellow,,1.535496539113966
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,mean_x_circle,,1.4650461299121802
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_yellow & std_x_all,,0.8515608828120662
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_green & std_x_all,,0.7488312812422798
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,mean_x_triangle,,0.7186623677119228
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_yellow & mean_x_all,,0.6946433671413306
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_size_large,,0.617613148792955
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,std_y_all,,0.590208386918521
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_cyan,,0.5208161022049342
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_yellow & pair_close,,0.29533722649681493
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_yellow & pair_horiz_aligned,,0.2816545024473836
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_shape_triangle,,0.2670772890938782
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_green,,0.2418593677782949
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_color_magenta,,0.22849442500296063
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,std_x_all,,0.221628212105358
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,mean_y_triangle,,0.21126219507481203
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_shape_square,,0.19674603750419473
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_same_color,,0.19334707362831655
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,mean_y_all,,0.19230748477175205
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_same_size,,0.14605952951797413
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_same_shape,,0.12076030821681395
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_size_small,,0.11245825871862754
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,mean_x_square,,0.1098463024831526
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_left_right,,0.10599837387466303
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_horiz_aligned,,0.09780814690070234
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,count_shape_circle,,0.09723357670210364
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,n_objects,,0.09693387163694031
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,mean_x_all,,0.08063193252192923
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_close,,0.03279499860994337
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,mean_y_circle,,0.0
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,mean_y_square,,0.0
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_above_below,,0.0
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_diagonal,,0.0
+12,red triangle on the right and at least one blue object and arbitrary objects,ebm,pair_vert_aligned,,0.0
+14,palindrome aba,ebm,mean_x_square & mean_x_circle,,1.6463685264404864
+14,palindrome aba,ebm,mean_x_triangle,,1.5286782627118563
+14,palindrome aba,ebm,mean_x_square,,1.2175696568505872
+14,palindrome aba,ebm,mean_x_circle,,1.2100670047464006
+14,palindrome aba,ebm,mean_x_all,,1.0817285012309261
+14,palindrome aba,ebm,count_color_yellow,,0.6825802791978162
+14,palindrome aba,ebm,mean_x_square & pair_same_size,,0.6670669309993422
+14,palindrome aba,ebm,count_color_blue,,0.6156563617103737
+14,palindrome aba,ebm,count_color_green & pair_same_size,,0.5885953326091117
+14,palindrome aba,ebm,count_shape_square,,0.37515589263295324
+14,palindrome aba,ebm,count_shape_circle,,0.36440956642411165
+14,palindrome aba,ebm,pair_horiz_aligned,,0.34717795519390693
+14,palindrome aba,ebm,std_x_all,,0.34694897228189403
+14,palindrome aba,ebm,n_objects,,0.34661888455799544
+14,palindrome aba,ebm,pair_left_right,,0.3465684662150788
+14,palindrome aba,ebm,mean_x_square & count_size_large,,0.30876286926423896
+14,palindrome aba,ebm,mean_x_square & count_size_small,,0.2983717595450334
+14,palindrome aba,ebm,mean_y_triangle,,0.2894768113588347
+14,palindrome aba,ebm,mean_y_all,,0.1880305132284085
+14,palindrome aba,ebm,count_size_large,,0.17742542758527283
+14,palindrome aba,ebm,count_size_small,,0.16919899857114298
+14,palindrome aba,ebm,count_color_magenta,,0.16862038327760165
+14,palindrome aba,ebm,pair_same_size,,0.16389008817483505
+14,palindrome aba,ebm,pair_same_color,,0.14453009235028158
+14,palindrome aba,ebm,count_color_green,,0.1435091652986039
+14,palindrome aba,ebm,std_y_all,,0.1401241383072452
+14,palindrome aba,ebm,count_color_red,,0.09642988457354766
+14,palindrome aba,ebm,pair_same_shape,,0.05771567483515443
+14,palindrome aba,ebm,count_shape_triangle,,0.03371727667918097
+14,palindrome aba,ebm,count_color_cyan,,0.02716265203129938
+14,palindrome aba,ebm,mean_y_square,,0.0
+14,palindrome aba,ebm,mean_y_circle,,0.0
+14,palindrome aba,ebm,pair_diagonal,,0.0
+14,palindrome aba,ebm,pair_above_below,,0.0
+14,palindrome aba,ebm,pair_close,,0.0
+14,palindrome aba,ebm,pair_vert_aligned,,0.0
+16,car,ebm,count_color_magenta,,3.642714320100269
+16,car,ebm,pair_same_size,,3.284317552640743
+16,car,ebm,count_color_red,,2.9386858087827035
+16,car,ebm,count_shape_circle,,2.7363799599652023
+16,car,ebm,std_y_all,,2.482719309854167
+16,car,ebm,count_shape_triangle,,1.8540958561206544
+16,car,ebm,mean_y_triangle,,0.8594304164267671
+16,car,ebm,pair_same_color,,0.8085737981062924
+16,car,ebm,pair_same_shape,,0.5777244293813976
+16,car,ebm,mean_x_square,,0.5706936078618071
+16,car,ebm,count_color_cyan,,0.5184603453185624
+16,car,ebm,pair_left_right,,0.48131972508016235
+16,car,ebm,pair_horiz_aligned,,0.48007582579771463
+16,car,ebm,n_objects,,0.4795629509989931
+16,car,ebm,mean_x_circle,,0.4349507352248567
+16,car,ebm,mean_x_triangle,,0.39658859892987774
+16,car,ebm,std_y_all & pair_same_size,,0.3182742607700617
+16,car,ebm,std_x_all,,0.29234978680556695
+16,car,ebm,pair_same_color & pair_close,,0.27620149081263407
+16,car,ebm,count_color_blue,,0.2656337037140256
+16,car,ebm,count_size_large & pair_same_shape,,0.2504734356805865
+16,car,ebm,count_shape_square,,0.24492847112288
+16,car,ebm,count_size_small,,0.22509146335418428
+16,car,ebm,pair_same_color & pair_same_size,,0.2180258063060543
+16,car,ebm,pair_same_size & pair_close,,0.21532423498913372
+16,car,ebm,count_size_large,,0.19150128471847092
+16,car,ebm,mean_x_all,,0.19108697587760734
+16,car,ebm,count_color_green,,0.15194406968126237
+16,car,ebm,mean_y_circle,,0.14062038040392583
+16,car,ebm,pair_close,,0.13744473505189
+16,car,ebm,count_color_yellow,,0.13504404913932083
+16,car,ebm,mean_y_all,,0.10868234470054869
+16,car,ebm,mean_y_square,,0.06717111560745961
+16,car,ebm,pair_above_below,,0.0
+16,car,ebm,pair_diagonal,,0.0
+16,car,ebm,pair_vert_aligned,,0.0

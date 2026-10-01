@@ -1,0 +1,28 @@
+{
+  "selected_variant": "resnet18_pretrained",
+  "validation_f1": 0.9229128372763441,
+  "encoder_checkpoint": "/home/cosimo/Downloads/kandy-xai/results/visual_models/checkpoints/resnet18_pretrained_encoder_only.pt",
+  "full_checkpoint": "/home/cosimo/Downloads/kandy-xai/results/visual_models/checkpoints/resnet18_pretrained_best.pt",
+  "tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ]
+}
