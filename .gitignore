@@ -1,0 +1,10 @@
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python
+.venv/
+__pycache__/
+
+# Model checkpoints
+results/visual_models/checkpoints/*.pt

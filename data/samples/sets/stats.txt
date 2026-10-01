@@ -1,0 +1,395 @@
+General parameters:
+	Seed: 12345
+	Canvas size: (224, 224)
+	Padding: 3
+	Background color: #7f7f7f
+	Colors: [{'red': '#ff0000'}, {'yellow': '#ffff00'}, {'green': '#00ff00'}, {'cyan': '#00ffff'}, {'blue': '#0000ff'}, {'magenta': '#ff00ff'}]
+	Sizes: [{'small': 7}, {'large': 15}]
+	Size noise (uniform): 2
+	Hue noise (Gaussian): mu=0, sigma=0.01
+	Saturation noise (Gaussian): mu=0, sigma=0.2
+	Value noise (Gaussian): mu=0, sigma=0.2
+	Task id noise probability: 0.0
+	Mode: independent datasets
+	Task type: binary classification
+Task specific parameters:
+	Task 0:
+		Name: triangle vs any
+		Seed: 12345
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 41
+		Total negative samples (including unsupervised): 59
+		Rejected samples:
+			Positives: 0 (rule violation), 17 (already sampled)
+			Negatives: 0 (rule violation), 17 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 1:
+		Name: square vs any
+		Seed: 12344
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 42
+		Total negative samples (including unsupervised): 58
+		Rejected samples:
+			Positives: 0 (rule violation), 29 (already sampled)
+			Negatives: 0 (rule violation), 12 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 2:
+		Name: circle vs any
+		Seed: 12347
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 50
+		Total negative samples (including unsupervised): 50
+		Rejected samples:
+			Positives: 0 (rule violation), 43 (already sampled)
+			Negatives: 0 (rule violation), 21 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 3:
+		Name: red vs any
+		Seed: 12346
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 29
+		Total negative samples (including unsupervised): 71
+		Rejected samples:
+			Positives: 0 (rule violation), 76 (already sampled)
+			Negatives: 0 (rule violation), 22 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 4:
+		Name: green vs any
+		Seed: 12349
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 30
+		Total negative samples (including unsupervised): 70
+		Rejected samples:
+			Positives: 0 (rule violation), 67 (already sampled)
+			Negatives: 0 (rule violation), 25 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 5:
+		Name: blue vs any
+		Seed: 12348
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 29
+		Total negative samples (including unsupervised): 71
+		Rejected samples:
+			Positives: 0 (rule violation), 62 (already sampled)
+			Negatives: 0 (rule violation), 19 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 6:
+		Name: cyan vs any
+		Seed: 12351
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 29
+		Total negative samples (including unsupervised): 71
+		Rejected samples:
+			Positives: 0 (rule violation), 73 (already sampled)
+			Negatives: 0 (rule violation), 29 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 7:
+		Name: magenta vs any
+		Seed: 12350
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 27
+		Total negative samples (including unsupervised): 73
+		Rejected samples:
+			Positives: 0 (rule violation), 50 (already sampled)
+			Negatives: 0 (rule violation), 29 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 8:
+		Name: yellow vs any
+		Seed: 12337
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 30
+		Total negative samples (including unsupervised): 70
+		Rejected samples:
+			Positives: 0 (rule violation), 65 (already sampled)
+			Negatives: 0 (rule violation), 20 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 9:
+		Name: red triangle on the right
+		Seed: 12336
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 38
+		Total negative samples (including unsupervised): 62
+		Rejected samples:
+			Positives: 0 (rule violation), 17 (already sampled)
+			Negatives: 0 (rule violation), 2 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 10:
+		Name: red triangle on the right and arbitrary objects
+		Seed: 12339
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 62
+		Total negative samples (including unsupervised): 38
+		Rejected samples:
+			Positives: 0 (rule violation), 0 (already sampled)
+			Negatives: 11 (rule violation), 0 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 11:
+		Name: red triangle on the right and at least one circle and arbitrary objects
+		Seed: 12338
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 64
+		Total negative samples (including unsupervised): 36
+		Rejected samples:
+			Positives: 0 (rule violation), 0 (already sampled)
+			Negatives: 14 (rule violation), 0 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 12:
+		Name: red triangle on the right and at least one blue object and arbitrary objects
+		Seed: 12341
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 54
+		Total negative samples (including unsupervised): 46
+		Rejected samples:
+			Positives: 0 (rule violation), 0 (already sampled)
+			Negatives: 6 (rule violation), 0 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 13:
+		Name: triangle and square, same color
+		Seed: 12340
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 61
+		Total negative samples (including unsupervised): 39
+		Rejected samples:
+			Positives: 0 (rule violation), 0 (already sampled)
+			Negatives: 4 (rule violation), 0 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 14:
+		Name: palindrome aba
+		Seed: 12343
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 56
+		Total negative samples (including unsupervised): 44
+		Rejected samples:
+			Positives: 0 (rule violation), 3 (already sampled)
+			Negatives: 21 (rule violation), 2 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 15:
+		Name: house
+		Seed: 12342
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 51
+		Total negative samples (including unsupervised): 49
+		Rejected samples:
+			Positives: 0 (rule violation), 1 (already sampled)
+			Negatives: 1 (rule violation), 0 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 16:
+		Name: car
+		Seed: 12329
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 39
+		Total negative samples (including unsupervised): 61
+		Rejected samples:
+			Positives: 0 (rule violation), 18 (already sampled)
+			Negatives: 0 (rule violation), 0 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 17:
+		Name: tower
+		Seed: 12328
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 47
+		Total negative samples (including unsupervised): 53
+		Rejected samples:
+			Positives: 0 (rule violation), 0 (already sampled)
+			Negatives: 3 (rule violation), 0 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 18:
+		Name: wagon
+		Seed: 12331
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 52
+		Total negative samples (including unsupervised): 48
+		Rejected samples:
+			Positives: 0 (rule violation), 1 (already sampled)
+			Negatives: 0 (rule violation), 0 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement
+	Task 19:
+		Name: traffic light
+		Seed: 12330
+		Patience: 1000
+		Gamma: 1.0
+		Beta: 1.0
+		Inject color noise: True
+		Inject size noise: True
+		Total samples: 100
+		Unique samples: 100
+		Total positive samples (including unsupervised): 10
+		Total negative samples (including unsupervised): 90
+		Rejected samples:
+			Positives: 0 (rule violation), 87 (already sampled)
+			Negatives: 0 (rule violation), 1 (already sampled)
+		Train samples (0.5): expected 50, actual 50
+		Val samples (0.25): expected 25, actual 25
+		Test samples (0.25): expected 25, actual 25
+		Sampling without replacement

@@ -46,16 +46,14 @@ All'interno della repository si trovano le seguenti cartelle:
 
 ### Fonti Utilizzate DA SISTEMARE
 
-- Paper 1
+- [Paper 1](https://link.springer.com/article/10.1007/s10994-025-06798-x)
 - Paper 2
-- Paper 3
-- Documentazione 1
-- Documentazione 2
+- Note del Corso di Explainable Artificial Intelligence
 
-#### Large Language Models DA SPECIFICARE
+#### Large Language Models 
 
-- Chatgpt
-- Claude
+- GPT-5.6 Luna 
+- Claude Sonnet 5.4
 
 ---
 
@@ -1749,7 +1747,7 @@ Rispetto alla testa lineare, nella MLP l'intervento sui concetti produce variazi
 
 ![ablation](results/neuro_symbolic_concept_cbm/plots/cumulative_mlp.png)
 
-Rispetto alla testa lineare, nella MLP la curva mostra un calo iniziale più ripido: già la rimozione dei primi concetti più importanti porta a una diminuzione marcata della macro-F1. Dopo alcune oscillazioni, la performance continua a ridursi e, quando vengono rimossi molti concetti, il calo diventa ancora più evidente, indicando che la MLP sfrutta in modo significativo le combinazioni tra le informazioni presenti nel bottleneck.
+Rispetto alla testa lineare, nella MLP la curva mostra un calo più ripido: già la rimozione dei primi concetti più importanti porta a una diminuzione marcata della macro-F1. Dopo alcune oscillazioni, la performance continua a ridursi e, quando vengono rimossi molti concetti, il calo diventa ancora più evidente, indicando che la MLP sfrutta in modo significativo le combinazioni tra le informazioni presenti nel bottleneck.
 
 #### Robustezza & Concetti Rumorosi
 
