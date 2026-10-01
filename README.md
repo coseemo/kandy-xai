@@ -2,7 +2,7 @@
 
 ## Obiettivi dell'elaborato
 
-L'obbiettivo dell'elaborato è quello di andare a osservare ed analizzare l'utilizzo il comportamento di modelli interpretabili e neuro-simbolici sul dataset di KANDY-Easy [link1]; per realizzare tale obiettivo, il lavoro è stato diviso in quattro notebook, uno per ciascuna fase del progetto:
+L'obbiettivo dell'elaborato è quello di andare a osservare ed analizzare l'utilizzo il comportamento di modelli interpretabili e neuro-simbolici sul dataset di KANDY-Easy; per realizzare tale obiettivo, il lavoro è stato diviso in quattro notebook, uno per ciascuna fase del progetto:
 
 1. Inizialmente andiamo ad approfondire il dataset in esame.
 2. Andiamo poi a confrontare i comportamenti di diverse tecniche interpretabili su tale dataset.
@@ -44,10 +44,9 @@ All'interno della repository si trovano le seguenti cartelle:
 
 ---
 
-### Fonti Utilizzate DA SISTEMARE
+### Fonti Utilizzate
 
-- [Paper 1](https://link.springer.com/article/10.1007/s10994-025-06798-x)
-- Paper 2
+- [The KANDY benchmark](https://link.springer.com/article/10.1007/s10994-025-06798-x)
 - Note del Corso di Explainable Artificial Intelligence
 
 #### Large Language Models 
@@ -354,68 +353,95 @@ Nel Decision Tree ritroviamo i pesi di classe "balanced" per lo stesso motivo de
 
 Osserviamo dunque i risultati del test, in queste due tabelle troviamo le performance utilizzando solo le feature percettive (tabella a sinistra) e quelle utilizzando le feature percettive e quelle relazionali:
 
-```html
 <table>
 <tr>
-<td valign="top">
+<td valign="top" width="50%">
 
-### Feature Percettive
+<h3>Feature Percettive</h3>
 
-| task_id | task | model | val_f1 | accuracy | precision | recall | f1 |
-|---:|---|---|---:|---:|---:|---:|---:|
-| 0 | triangle vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 1 | square vs any | logistic | 0.962963 | 0.96 | 0.900000 | 1.000000 | 0.947368 |
-| 2 | circle vs any | logistic | 0.933333 | 0.92 | 1.000000 | 0.857143 | 0.923077 |
-| 3 | red vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 4 | green vs any | logistic | 0.947368 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 5 | blue vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 6 | cyan vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 7 | magenta vs any | logistic | 0.909091 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 8 | yellow vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 9 | red triangle on the right | logistic | 0.800000 | 0.96 | 0.888889 | 1.000000 | 0.941176 |
-| 10 | red triangle on the right and arbitrary objects | logistic | 0.814815 | 0.84 | 0.933333 | 0.823529 | 0.875000 |
-| 11 | red triangle on the right and at least one circle | logistic | 0.864865 | 0.80 | 0.761905 | 1.000000 | 0.864865 |
-| 12 | red triangle on the right and at least one blue object | logistic | 0.777778 | 0.72 | 0.722222 | 0.866667 | 0.787879 |
-| 13 | triangle and square, same color | tree | 0.838710 | 0.80 | 0.833333 | 0.882353 | 0.857143 |
-| 14 | palindrome aba | tree | 0.695652 | 0.76 | 0.875000 | 0.583333 | 0.700000 |
-| 15 | house | logistic | 0.888889 | 0.60 | 0.416667 | 0.625000 | 0.500000 |
-| 16 | car | tree | 0.818182 | 0.92 | 0.900000 | 0.900000 | 0.900000 |
-| 17 | tower | logistic | 0.967742 | 0.96 | 0.888889 | 1.000000 | 0.941176 |
-| 18 | wagon | logistic | 0.965517 | 0.84 | 0.875000 | 0.875000 | 0.875000 |
-| 19 | traffic light | tree | 0.666667 | 0.56 | 0.166667 | 0.666667 | 0.266667 |
+<table>
+<thead>
+<tr>
+<th>task_id</th>
+<th>task</th>
+<th>model</th>
+<th>val_f1</th>
+<th>accuracy</th>
+<th>precision</th>
+<th>recall</th>
+<th>f1</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>triangle vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>1</td><td>square vs any</td><td>logistic</td><td>0.962963</td><td>0.96</td><td>0.900000</td><td>1.000000</td><td>0.947368</td></tr>
+<tr><td>2</td><td>circle vs any</td><td>logistic</td><td>0.933333</td><td>0.92</td><td>1.000000</td><td>0.857143</td><td>0.923077</td></tr>
+<tr><td>3</td><td>red vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>4</td><td>green vs any</td><td>logistic</td><td>0.947368</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>5</td><td>blue vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>6</td><td>cyan vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>7</td><td>magenta vs any</td><td>logistic</td><td>0.909091</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>8</td><td>yellow vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>9</td><td>red triangle on the right</td><td>logistic</td><td>0.800000</td><td>0.96</td><td>0.888889</td><td>1.000000</td><td>0.941176</td></tr>
+<tr><td>10</td><td>red triangle on the right and arbitrary objects</td><td>logistic</td><td>0.814815</td><td>0.84</td><td>0.933333</td><td>0.823529</td><td>0.875000</td></tr>
+<tr><td>11</td><td>red triangle on the right and at least one circle</td><td>logistic</td><td>0.864865</td><td>0.80</td><td>0.761905</td><td>1.000000</td><td>0.864865</td></tr>
+<tr><td>12</td><td>red triangle on the right and at least one blue object</td><td>logistic</td><td>0.777778</td><td>0.72</td><td>0.722222</td><td>0.866667</td><td>0.787879</td></tr>
+<tr><td>13</td><td>triangle and square, same color</td><td>tree</td><td>0.838710</td><td>0.80</td><td>0.833333</td><td>0.882353</td><td>0.857143</td></tr>
+<tr><td>14</td><td>palindrome aba</td><td>tree</td><td>0.695652</td><td>0.76</td><td>0.875000</td><td>0.583333</td><td>0.700000</td></tr>
+<tr><td>15</td><td>house</td><td>logistic</td><td>0.888889</td><td>0.60</td><td>0.416667</td><td>0.625000</td><td>0.500000</td></tr>
+<tr><td>16</td><td>car</td><td>tree</td><td>0.818182</td><td>0.92</td><td>0.900000</td><td>0.900000</td><td>0.900000</td></tr>
+<tr><td>17</td><td>tower</td><td>logistic</td><td>0.967742</td><td>0.96</td><td>0.888889</td><td>1.000000</td><td>0.941176</td></tr>
+<tr><td>18</td><td>wagon</td><td>logistic</td><td>0.965517</td><td>0.84</td><td>0.875000</td><td>0.875000</td><td>0.875000</td></tr>
+<tr><td>19</td><td>traffic light</td><td>tree</td><td>0.666667</td><td>0.56</td><td>0.166667</td><td>0.666667</td><td>0.266667</td></tr>
+</tbody>
+</table>
 
 </td>
-<td valign="top">
 
-### Feature Percettive + Relazionali
+<td valign="top" width="50%">
 
-| task_id | task | model | val_f1 | accuracy | precision | recall | f1 |
-|---:|---|---|---:|---:|---:|---:|---:|
-| 0 | triangle vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 1 | square vs any | logistic | 0.962963 | 0.96 | 0.900000 | 1.000000 | 0.947368 |
-| 2 | circle vs any | logistic | 0.933333 | 0.92 | 1.000000 | 0.857143 | 0.923077 |
-| 3 | red vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 4 | green vs any | logistic | 0.947368 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 5 | blue vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 6 | cyan vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 7 | magenta vs any | logistic | 0.909091 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 8 | yellow vs any | logistic | 1.000000 | 1.00 | 1.000000 | 1.000000 | 1.000000 |
-| 9 | red triangle on the right | logistic | 0.800000 | 0.96 | 0.888889 | 1.000000 | 0.941176 |
-| 10 | red triangle on the right and arbitrary objects | logistic | 0.838710 | 0.84 | 0.933333 | 0.823529 | 0.875000 |
-| 11 | red triangle on the right and at least one circle | logistic | 0.888889 | 0.76 | 0.750000 | 0.937500 | 0.833333 |
-| 12 | red triangle on the right and at least one blue object | tree | 0.733333 | 0.80 | 0.777778 | 0.933333 | 0.848485 |
-| 13 | triangle and square, same color | logistic | 1.000000 | 0.96 | 0.944444 | 1.000000 | 0.971429 |
-| 14 | palindrome aba | tree | 0.769231 | 0.68 | 0.666667 | 0.666667 | 0.666667 |
-| 15 | house | logistic | 0.833333 | 0.48 | 0.307692 | 0.500000 | 0.380952 |
-| 16 | car | tree | 0.941176 | 0.72 | 0.666667 | 0.600000 | 0.631579 |
-| 17 | tower | logistic | 0.967742 | 0.96 | 0.888889 | 1.000000 | 0.941176 |
-| 18 | wagon | logistic | 0.965517 | 0.96 | 1.000000 | 0.937500 | 0.967742 |
-| 19 | traffic light | logistic | 0.800000 | 0.80 | 0.333333 | 0.666667 | 0.444444 |
+<h3>Feature Percettive + Relazionali</h3>
+
+<table>
+<thead>
+<tr>
+<th>task_id</th>
+<th>task</th>
+<th>model</th>
+<th>val_f1</th>
+<th>accuracy</th>
+<th>precision</th>
+<th>recall</th>
+<th>f1</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>triangle vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>1</td><td>square vs any</td><td>logistic</td><td>0.962963</td><td>0.96</td><td>0.900000</td><td>1.000000</td><td>0.947368</td></tr>
+<tr><td>2</td><td>circle vs any</td><td>logistic</td><td>0.933333</td><td>0.92</td><td>1.000000</td><td>0.857143</td><td>0.923077</td></tr>
+<tr><td>3</td><td>red vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>4</td><td>green vs any</td><td>logistic</td><td>0.947368</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>5</td><td>blue vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>6</td><td>cyan vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>7</td><td>magenta vs any</td><td>logistic</td><td>0.909091</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>8</td><td>yellow vs any</td><td>logistic</td><td>1.000000</td><td>1.00</td><td>1.000000</td><td>1.000000</td><td>1.000000</td></tr>
+<tr><td>9</td><td>red triangle on the right</td><td>logistic</td><td>0.800000</td><td>0.96</td><td>0.888889</td><td>1.000000</td><td>0.941176</td></tr>
+<tr><td>10</td><td>red triangle on the right and arbitrary objects</td><td>logistic</td><td>0.838710</td><td>0.84</td><td>0.933333</td><td>0.823529</td><td>0.875000</td></tr>
+<tr><td>11</td><td>red triangle on the right and at least one circle</td><td>logistic</td><td>0.888889</td><td>0.76</td><td>0.750000</td><td>0.937500</td><td>0.833333</td></tr>
+<tr><td>12</td><td>red triangle on the right and at least one blue object</td><td>tree</td><td>0.733333</td><td>0.80</td><td>0.777778</td><td>0.933333</td><td>0.848485</td></tr>
+<tr><td>13</td><td>triangle and square, same color</td><td>logistic</td><td>1.000000</td><td>0.96</td><td>0.944444</td><td>1.000000</td><td>0.971429</td></tr>
+<tr><td>14</td><td>palindrome aba</td><td>tree</td><td>0.769231</td><td>0.68</td><td>0.666667</td><td>0.666667</td><td>0.666667</td></tr>
+<tr><td>15</td><td>house</td><td>logistic</td><td>0.833333</td><td>0.48</td><td>0.307692</td><td>0.500000</td><td>0.380952</td></tr>
+<tr><td>16</td><td>car</td><td>tree</td><td>0.941176</td><td>0.72</td><td>0.666667</td><td>0.600000</td><td>0.631579</td></tr>
+<tr><td>17</td><td>tower</td><td>logistic</td><td>0.967742</td><td>0.96</td><td>0.888889</td><td>1.000000</td><td>0.941176</td></tr>
+<tr><td>18</td><td>wagon</td><td>logistic</td><td>0.965517</td><td>0.96</td><td>1.000000</td><td>0.937500</td><td>0.967742</td></tr>
+<tr><td>19</td><td>traffic light</td><td>logistic</td><td>0.800000</td><td>0.80</td><td>0.333333</td><td>0.666667</td><td>0.444444</td></tr>
+</tbody>
+</table>
 
 </td>
 </tr>
 </table>
-```
 
 CCome si può vedere dai risultati, introdurre le feature relazionali lascia completamente invariata la performance sui primi task, 0-8, che dipendono principalmente dalle proprietà dei singoli oggetti, come forma e colore. Nei task successivi, invece, l'effetto delle feature relazionali è meno uniforme: in alcuni casi portano a un miglioramento, mentre in altri non portano benefici o addirittura peggiorano la performance. In particolare, si osservano miglioramenti nei task 12, 13, 18 e 19. Il miglioramento più marcato riguarda il task 13, relativo alla presenza di un triangolo e di un quadrato dello stesso colore, dove l'F1 passa da 0.857 a 0.971, mentre nel task 18, relativo al wagon, l'F1 passa da 0.875 a 0.968, nel task 12 l'F1 passa invece da 0.788 a 0.848, e infine, nel task 19 passa da 0.267 a 0.444.
 
