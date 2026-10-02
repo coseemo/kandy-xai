@@ -1,0 +1,338 @@
+{
+    "task_id": 2,
+    "newly_acquired": [
+        "circle"
+    ],
+    "conditions": {
+        "no_memory": "no external concept memory provided",
+        "relevant_memory": "circle concept acquired from a real KANDY training image",
+        "square_memory": "irrelevant in-domain concept injected as an ablation control",
+        "cow_memory": "irrelevant out-of-domain concept injected as an ablation control"
+    },
+    "metrics_no_memory": {
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.8,
+        "tp": 4,
+        "tn": 5,
+        "fp": 0,
+        "fn": 1
+    },
+    "metrics_relevant_memory": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 5,
+        "tn": 5,
+        "fp": 0,
+        "fn": 0
+    },
+    "metrics_square_memory": {
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.8,
+        "tp": 4,
+        "tn": 5,
+        "fp": 0,
+        "fn": 1
+    },
+    "metrics_cow_memory": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 5,
+        "tn": 5,
+        "fp": 0,
+        "fn": 0
+    },
+    "rows": [
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0007.png",
+            "label": 0,
+            "prediction_no_memory": 0,
+            "prediction_relevant_memory": 0,
+            "prediction_square_memory": 0,
+            "prediction_cow_memory": 0,
+            "evidence_no_memory": "The image contains a blue square on a gray background. There are no circular shapes present.",
+            "evidence_relevant_memory": "The image contains a blue square, which is a closed shape with straight edges and right angles, not a circle. The visual cues for a circle (smooth, continuous boundary, symmetrical form) are not present.",
+            "evidence_square_memory": "The image contains a blue square, which is defined as a four-sided geometric shape with four straight sides and four corners. There is no circle present.",
+            "evidence_cow_memory": "The image contains a blue square on a gray background. There is no circle present.",
+            "raw_no_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a blue square on a gray background. There are no circular shapes present.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a blue square, which is a closed shape with straight edges and right angles, not a circle. The visual cues for a circle (smooth, continuous boundary, symmetrical form) are not present.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"square\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a blue square, which is defined as a four-sided geometric shape with four straight sides and four corners. There is no circle present.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a blue square on a gray background. There is no circle present.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [
+                "square"
+            ],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0003.png",
+            "label": 1,
+            "prediction_no_memory": 1,
+            "prediction_relevant_memory": 1,
+            "prediction_square_memory": 1,
+            "prediction_cow_memory": 1,
+            "evidence_no_memory": "A green circular shape is visible in the bottom right corner of the image.",
+            "evidence_relevant_memory": "The image contains a small, solid green shape with a smooth, continuous boundary and uniform color fill, consistent with the visual cues for a circle.",
+            "evidence_square_memory": "The image contains a green circular shape in the bottom right corner.",
+            "evidence_cow_memory": "A green circular shape is visible in the bottom right corner of the image.",
+            "raw_no_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"A green circular shape is visible in the bottom right corner of the image.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small, solid green shape with a smooth, continuous boundary and uniform color fill, consistent with the visual cues for a circle.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a green circular shape in the bottom right corner.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"A green circular shape is visible in the bottom right corner of the image.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0023.png",
+            "label": 0,
+            "prediction_no_memory": 0,
+            "prediction_relevant_memory": 0,
+            "prediction_square_memory": 0,
+            "prediction_cow_memory": 0,
+            "evidence_no_memory": "The image contains a small pink triangle on a gray background. No circle is visible.",
+            "evidence_relevant_memory": "The image contains a small pink triangle, which is a polygon with straight edges, not a closed shape with a constant distance from a central point.",
+            "evidence_square_memory": "The image contains a small pink triangle, not a circle.",
+            "evidence_cow_memory": "The image contains a small pink triangle, not a circle.",
+            "raw_no_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small pink triangle on a gray background. No circle is visible.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small pink triangle, which is a polygon with straight edges, not a closed shape with a constant distance from a central point.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small pink triangle, not a circle.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small pink triangle, not a circle.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0016.png",
+            "label": 1,
+            "prediction_no_memory": 0,
+            "prediction_relevant_memory": 1,
+            "prediction_square_memory": 0,
+            "prediction_cow_memory": 1,
+            "evidence_no_memory": "The image contains a small magenta diamond shape on a gray background. A diamond is a quadrilateral, not a circle.",
+            "evidence_relevant_memory": "The image contains a small, solid, magenta shape that appears as a filled, round form against a gray background, consistent with the visual cues for a circle.",
+            "evidence_square_memory": "The image contains a small magenta shape that appears to be a diamond or rotated square, not a circle. The provided knowledge about 'square' was used to identify the shape's characteristics (four corners, straight sides) and confirm it is not a circle.",
+            "evidence_cow_memory": "The image contains a small pink diamond shape, which is a geometric figure with four straight sides, not a circle.",
+            "raw_no_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small magenta diamond shape on a gray background. A diamond is a quadrilateral, not a circle.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small, solid, magenta shape that appears as a filled, round form against a gray background, consistent with the visual cues for a circle.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"square\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small magenta shape that appears to be a diamond or rotated square, not a circle. The provided knowledge about 'square' was used to identify the shape's characteristics (four corners, straight sides) and confirm it is not a circle.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small pink diamond shape, which is a geometric figure with four straight sides, not a circle.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [
+                "square"
+            ],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0001.png",
+            "label": 0,
+            "prediction_no_memory": 0,
+            "prediction_relevant_memory": 0,
+            "prediction_square_memory": 0,
+            "prediction_cow_memory": 0,
+            "evidence_no_memory": "The image contains a small purple triangle on a gray background. No circle is visible.",
+            "evidence_relevant_memory": "The image contains a small purple triangle, not a circle. The visual cues for a circle (smooth, continuous boundary, symmetrical form) are not present.",
+            "evidence_square_memory": "The image contains a small purple triangle, not a circle. No circle is visible.",
+            "evidence_cow_memory": "The image contains a small purple triangle on a gray background. There are no circles present.",
+            "raw_no_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small purple triangle on a gray background. No circle is visible.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small purple triangle, not a circle. The visual cues for a circle (smooth, continuous boundary, symmetrical form) are not present.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small purple triangle, not a circle. No circle is visible.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small purple triangle on a gray background. There are no circles present.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0000.png",
+            "label": 0,
+            "prediction_no_memory": 0,
+            "prediction_relevant_memory": 0,
+            "prediction_square_memory": 0,
+            "prediction_cow_memory": 0,
+            "evidence_no_memory": "The image contains a red square on a gray background. No circular shapes are visible.",
+            "evidence_relevant_memory": "The image contains a red square, which has straight edges and four corners, not a smooth, continuous boundary characteristic of a circle.",
+            "evidence_square_memory": "The image contains a red square shape, which is defined as a four-sided geometric shape with four straight sides and four corners. There is no circle present.",
+            "evidence_cow_memory": "The image contains a red square on a gray background. There are no circles present.",
+            "raw_no_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a red square on a gray background. No circular shapes are visible.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a red square, which has straight edges and four corners, not a smooth, continuous boundary characteristic of a circle.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"square\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a red square shape, which is defined as a four-sided geometric shape with four straight sides and four corners. There is no circle present.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a red square on a gray background. There are no circles present.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [
+                "square"
+            ],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0015.png",
+            "label": 0,
+            "prediction_no_memory": 0,
+            "prediction_relevant_memory": 0,
+            "prediction_square_memory": 0,
+            "prediction_cow_memory": 0,
+            "evidence_no_memory": "The image contains a green triangle on a gray background. There is no circle present.",
+            "evidence_relevant_memory": "The image contains a green triangle, which is a polygon with straight edges, not a closed, round shape with a constant distance from a central point.",
+            "evidence_square_memory": "The image contains a green triangle, which is not a circle. The provided concept for 'square' was used to reason by exclusion, as the object does not match the visual cues of a square (four straight sides, four corners) nor is it a circle.",
+            "evidence_cow_memory": "The image contains a green triangle on a gray background. There is no circle present.",
+            "raw_no_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a green triangle on a gray background. There is no circle present.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a green triangle, which is a polygon with straight edges, not a closed, round shape with a constant distance from a central point.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [\n        \"square\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a green triangle, which is not a circle. The provided concept for 'square' was used to reason by exclusion, as the object does not match the visual cues of a square (four straight sides, four corners) nor is it a circle.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 0,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a green triangle on a gray background. There is no circle present.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [
+                "square"
+            ],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0024.png",
+            "label": 1,
+            "prediction_no_memory": 1,
+            "prediction_relevant_memory": 1,
+            "prediction_square_memory": 1,
+            "prediction_cow_memory": 1,
+            "evidence_no_memory": "A yellow circular shape is visible in the upper right portion of the image against a gray background.",
+            "evidence_relevant_memory": "The image contains a small, solid yellow shape in the upper right quadrant. It has a smooth, continuous boundary and uniform color fill, consistent with the visual cues for a circle, specifically matching the 'Small, pixelated dots due to low resolution' variant.",
+            "evidence_square_memory": "The image contains a yellow circular shape on a gray background.",
+            "evidence_cow_memory": "The image contains a yellow circular shape on a gray background.",
+            "raw_no_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"A yellow circular shape is visible in the upper right portion of the image against a gray background.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small, solid yellow shape in the upper right quadrant. It has a smooth, continuous boundary and uniform color fill, consistent with the visual cues for a circle, specifically matching the 'Small, pixelated dots due to low resolution' variant.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a yellow circular shape on a gray background.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a yellow circular shape on a gray background.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0004.png",
+            "label": 1,
+            "prediction_no_memory": 1,
+            "prediction_relevant_memory": 1,
+            "prediction_square_memory": 1,
+            "prediction_cow_memory": 1,
+            "evidence_no_memory": "A blue circular shape is visible in the bottom right corner of the image.",
+            "evidence_relevant_memory": "A solid blue filled shape with a smooth, continuous boundary and symmetrical form is visible in the bottom right corner, matching the visual cues for a circle.",
+            "evidence_square_memory": "The image contains a blue circular shape in the bottom right corner.",
+            "evidence_cow_memory": "A blue circular shape is visible in the bottom right corner of the image.",
+            "raw_no_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"A blue circular shape is visible in the bottom right corner of the image.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"A solid blue filled shape with a smooth, continuous boundary and symmetrical form is visible in the bottom right corner, matching the visual cues for a circle.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a blue circular shape in the bottom right corner.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"A blue circular shape is visible in the bottom right corner of the image.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        },
+        {
+            "image": "/home/cosimo/kandy_agent/data/samples/sets/test/2/0021.png",
+            "label": 1,
+            "prediction_no_memory": 1,
+            "prediction_relevant_memory": 1,
+            "prediction_square_memory": 1,
+            "prediction_cow_memory": 1,
+            "evidence_no_memory": "A cyan-colored circular shape is visible in the bottom right corner of the image against a gray background.",
+            "evidence_relevant_memory": "The image contains a small, cyan-colored, roughly circular shape in the bottom right corner, consistent with the visual cues for a circle including 'Solid filled shape' and 'Different colors'.",
+            "evidence_square_memory": "The image contains a cyan circular shape in the bottom right corner.",
+            "evidence_cow_memory": "A cyan circular shape is visible in the bottom right corner of the image.",
+            "raw_no_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"A cyan-colored circular shape is visible in the bottom right corner of the image against a gray background.\"\n}",
+            "raw_relevant_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [\n        \"circle\"\n    ],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a small, cyan-colored, roughly circular shape in the bottom right corner, consistent with the visual cues for a circle including 'Solid filled shape' and 'Different colors'.\"\n}",
+            "raw_square_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"The image contains a cyan circular shape in the bottom right corner.\"\n}",
+            "raw_cow_memory": "{\n    \"answer\": 1,\n    \"used_concepts\": [],\n    \"used_relations\": [],\n    \"evidence\": \"A cyan circular shape is visible in the bottom right corner of the image.\"\n}",
+            "no_memory_used_concepts": [],
+            "relevant_used_concepts": [
+                "circle"
+            ],
+            "square_used_concepts": [],
+            "cow_used_concepts": [],
+            "square_provided_concepts": [
+                "square"
+            ],
+            "cow_provided_concepts": [
+                "cow"
+            ]
+        }
+    ]
+}

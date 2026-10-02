@@ -2,14 +2,14 @@
 
 ## Obiettivi dell'elaborato
 
-L'obbiettivo dell'elaborato è quello di andare a osservare ed analizzare l'utilizzo il comportamento di modelli interpretabili e neuro-simbolici sul dataset di KANDY-Easy; per realizzare tale obiettivo, il lavoro è stato diviso in quattro notebook, uno per ciascuna fase del progetto:
+L'obiettivo dell'elaborato è quello di andare a osservare ed analizzare l'utilizzo il comportamento di modelli interpretabili e neuro-simbolici sul dataset di KANDY-Easy; per realizzare tale obiettivo, il lavoro è stato diviso in quattro notebook, uno per ciascuna fase del progetto:
 
 1. Inizialmente andiamo ad approfondire il dataset in esame.
 2. Andiamo poi a confrontare i comportamenti di diverse tecniche interpretabili su tale dataset.
 3. Dopodiché, prepariamo la strada per le tecniche neurosimboliche, esplorando diversi tipi di encoder visivi.
 4. Infine, utilizziamo la tecnica neuro-simbolica dei Concept Bottleneck Models (CBM)
 
-Per quanto riguarda le tecniche interpretabili, estrarremo alcune feature percettive direttamente dalle immagini del dataset tramite l'utilizzo di moduli di computer vision, tali feature verrano poi utilizzate nell'addestramento dei seguenti modelli:
+Per quanto riguarda le tecniche interpretabili, estrarremo alcune feature percettive direttamente dalle immagini del dataset tramite l'utilizzo di moduli di computer vision, tali feature verranno poi utilizzate nell'addestramento dei seguenti modelli:
 
 - Regressione Logistica
 - Alberi di decisione
@@ -28,7 +28,11 @@ Per concludere, sono state testate due versioni di CBM che si differenziano nell
 - Nella prima si utilizza una testa di classificazione lineare
 - Nella seconda viene utilizzato un piccolo MLP
 
-Oltre la fine, DA CONCLUDERE
+Una volta completate le attività che del laboratorio, ho sviluppato un ulteriore "esperimento" utilizzando un piccolo LLM multimodale locale, Qwen3.5-4B. L'idea alla base dell'esperimento è quella di affiancare al modello una memoria esterna, così da permettergli di acquisire e conservare concetti visivi e, in caso di errore, registrare informazioni utili a raffinare tali concetti nel tempo. L'obiettivo è quindi osservare se una memoria esplicita possa rendere il comportamento del modello più persistente e interpretabile, producendo non solo una predizione, ma anche un'evidenza testuale e l'indicazione dei concetti e delle relazioni utilizzati. Le spiegazioni prodotte non vengono tuttavia considerate necessariamente faithful rispetto al processo decisionale interno del modello, ma vengono valutate principalmente come spiegazioni esplicite e plausibili del comportamento osservato.
+
+Per una panoramica più esaustiva sul prototipo: [agent/README.md](agent/README.md)
+
+Va inoltre precisato che l'intero elaborato è stato svolto utilizzando esclusivamente la CPU del portatile e, di conseguenza, alcune scelte progettuali e sperimentali sono state influenzate anche dalla necessità di contenere i costi computazionali e i tempi di esecuzione. 
 
 ---
 
@@ -40,13 +44,14 @@ All'interno della repository si trovano le seguenti cartelle:
 - notebooks: contenente, appunto, i notebooks jupyter che compongono l'elaborato
 - results:  contenente i risultati degli esperimenti e i grafici qui mostrati
 - configs: contenente i file .yml per l'impostazione dei parametri utilizzati negli esperimenti
-- prompt: contenente
+- agent: contenente i moduli utilizzati per l'esperimento su llm locale
 
 ---
 
 ### Fonti Utilizzate
 
 - [The KANDY benchmark](https://link.springer.com/article/10.1007/s10994-025-06798-x)
+- 
 - Note del Corso di Explainable Artificial Intelligence
 
 #### Large Language Models 
@@ -58,7 +63,7 @@ All'interno della repository si trovano le seguenti cartelle:
 
 ## Notebook 1 - Analisi del Dataset
 
-L'obbiettivo del primo notebook è quello di andare a familiarizzare ed esplorare il dataset utilizzato.
+L'obiettivo del primo notebook è quello di andare a familiarizzare ed esplorare il dataset utilizzato.
 Ho scelto il dataset KANDY perché mi sembrava quello che tra quelli proposti più si prestava per iniziare a lavorare su questo tipo di problemi, data la disponibilità di descrizioni simboliche ricche per ciascun compito esaminato; inoltre, i test sono stati svolti interamente sulla variante "Easy" del dataset, questo in quanto, per iniziare, ho reputato fosse meglio concentrarsi su compiti "semplici" per capire meglio dove i modelli ecellono, dove faticano e di cosa hanno bisogno per migliorare le loro prestazioni; si riserva dunque la variante "Hard" per futuri approfondimenti.
 
 Prima di osservare le analisi svolte sui dati e i loro risultati, introduciamo brevemente il dataset.
@@ -67,7 +72,7 @@ KANDY-Easy è un dataset che si ispira alle forme geometriche presenti nei quadr
 
 Adesso procediamo con l'analisi del dataset.
 
-Comcinciamo con l'osservare quelli che sono i compiti presenti:
+cominciamo con l'osservare quelli che sono i compiti presenti:
 
 <details>
 <summary><strong>Task di KANDY-Easy</strong></summary>
@@ -201,7 +206,7 @@ Ho visualizzato poi la distribuzione di oggetti presenti all'interno delle immag
 
 Si nota che la maggior parte degli esempi ha un solo oggetto.
 
-Ho poi estratto dalle descrzioni simboliche alcuni concetti interpretabili (ex: circle, yellow, qudrant_lr, small, 1 oggetto) che ci serviranno successivamente per andare a costruire i modelli interpretabili e neuro-simbolici.
+Ho poi estratto dalle descrizioni simboliche alcuni concetti interpretabili (ex: circle, yellow, qudrant_lr, small, 1 oggetto) che ci serviranno successivamente per andare a costruire i modelli interpretabili e neuro-simbolici.
 
 
 <details>
@@ -296,7 +301,7 @@ Per le feature che riguardano le relazioni spaziali tra gli oggetti, sono andato
 
 Feature relazionali: 'pair_left_right', 'pair_above_below', 'pair_diagonal', 'pair_same_shape', 'pair_same_color', 'pair_same_size', 'pair_horiz_aligned', 'pair_vert_aligned', 'pair_close'.
 
-Con questo si conclude la fase di percezione, andiamo dunque a vedere quali sono le perfomance dei modelli, utilizzando queste feature.
+Con questo si conclude la fase di percezione, andiamo dunque a vedere quali sono le performance dei modelli, utilizzando queste feature.
 
 ### Addestramento e Valutazione
 
@@ -473,7 +478,7 @@ Anche nel task 2 la forma è l'informazione principale: count_shape_circle ha il
 
 ![interp](results/interpretable_models/task_9_selected_logistic.png)
 
-Nel task 9 il contributo maggiore è dato da count_color_red, seguito da mean_x_triangle e count_shape_triangle. La presenza di un triangolo rosso e, soprattutto, una maggiore coordinata x del triangolo sono quindi fortemente associate alla classe positiva come ci si aspetterebbe. È interessante anche pair_same_color, che presenta un coefficiente negativo: in questo caso il fatto che esistano coppie con lo stesso colore sembra essere associato maggiormente alla classe negativa. Il modello sembra quindi riuscre a combinare colore, forma, posizione e relazioni tra oggetti.
+Nel task 9 il contributo maggiore è dato da count_color_red, seguito da mean_x_triangle e count_shape_triangle. La presenza di un triangolo rosso e, soprattutto, una maggiore coordinata x del triangolo sono quindi fortemente associate alla classe positiva come ci si aspetterebbe. È interessante anche pair_same_color, che presenta un coefficiente negativo: in questo caso il fatto che esistano coppie con lo stesso colore sembra essere associato maggiormente alla classe negativa. Il modello sembra quindi riuscire a combinare colore, forma, posizione e relazioni tra oggetti.
 
 #### Task 12 
 
@@ -970,29 +975,31 @@ Partiamo dunque da alcuni esempi su Vanilla Gradient, in questo caso sono andato
 
 Le mappe mostrano che il modello tende a concentrarsi sugli oggetti rilevanti dell'immagine anche in quei casi in cui la predizione è errata, segno che il modello riesce spesso a individuare le parti più importanti dell'immagine; nei task più semplici la salienza è molto localizzata, mentre nei task strutturati si distribuisce su più oggetti, lungo la loro configurazionee a volte anche in altre aree dell'immagine: nei casi FP e FN questo comportamento evidenzia un limite, e cioè il modello riconosce spesso gli elementi visivi corretti, ma fatica a distinguere la relazione o la combinazione precisa richiesta dalla task.
 
+Interessante è il task 14, in cui vediamo che il modello si concentra prevalentemente sull'oggetto centrale. Questo risultato è interessante perché, data la struttura del task, ci si aspetterebbe che la relazione tra i due elementi laterali fosse particolarmente rilevante. La mappa potrebbe quindi indicare che il modello utilizza una rappresentazione diversa da quella intuitivamente attesa.
+
 Nelle mappe si nota inoltre una maggiore intensità dei gradienti lungo i contorni degli oggetti, mentre la parte interna rimane relativamente poco attiva; questo comportamento è coerente con la natura di Vanilla Gradient: la misura evidenzia i pixel per i quali una piccola perturbazione modifica maggiormente l'output e siccome gli oggetti in esami hanno regioni interne quasi uniformi e bordi molto netti, le variazioni lungo il contorno risultano particolarmente rilevanti.
 
 
 #### Grad-CAM
 
-![encoders](results/visual_models/xai/gradcam_task_00_FN.png)
-![encoders](results/visual_models/xai/gradcam_task_09_TN.png)
-![encoders](results/visual_models/xai/gradcam_task_13_FN.png)
-![encoders](results/visual_models/xai/gradcam_task_14_TP.png)
+![encoders](results/visual_models/xai/gradcam/gradcam_task_00_FN.png)
+![encoders](results/visual_models/xai/gradcam/gradcam_task_09_TN.png)
+![encoders](results/visual_models/xai/gradcam/gradcam_task_13_FN.png)
+![encoders](results/visual_models/xai/gradcam/gradcam_task_14_TP.png)
 
 Sugli stessi esempi, visualizziamo adesso le mappe ottenute con Grad-CAM le quali, per via del loro funzionamento basato sulle feature più profonde del modello, risultano essere meno precise ma anche meno rumorose. Tra i risultati più interessanti:
 - Nel task 9 “red triangle on the right”, la zona più rilevante è quella che si trova nella parte destra dell'immagine.
-- Nel task 14 “palindrome aba”, in particolare nell'esempio positivo, la Grad-CAM mostra invece una maggiore attivazione nella regione dell'oggetto centrale rispetto agli elementi laterali (come accadeva anche in Vanilla Gradient). Questo risultato è interessante perché, data la struttura del task, ci si aspetterebbe che la relazione tra i due elementi laterali fosse particolarmente rilevante. La mappa potrebbe quindi indicare che il modello utilizza una rappresentazione diversa da quella intuitivamente attesa. Tuttavia, Grad-CAM non permette di concludere direttamente che gli elementi laterali vengano ignorati, né che questo comportamento sia la causa delle prestazioni non ottimali sul task; tali ipotesi richiederebbero un'analisi sistematica di più esempi.
+- Nel task 14 “palindrome aba”, in particolare nell'esempio positivo, la Grad-CAM mostra invece una maggiore attivazione nella regione destra diversamente da quello che accadeva in Vanilla Gradient.
 - Nel task 0, diversamente da quanto osservato con Vanilla Gradient, il modello sembra avere maggiori difficoltà nell'individuare il triangolo. La mappa appare infatti piuttosto diffusa sull'immagine, quasi come se il modello "stesse ricercando l'oggetto" senza riuscire a trovarlo. Un'ipotesi è che Grad-CAM basandosi sulle rappresentazioni più profonde della rete, che quindi risultano più compresse e quindi meno precise, nel caso di un triangolo di piccole dimensioni, potrebbe avere più difficoltà a preservare e localizzare efficacemente l'informazione relativa alla sua presenza.
 
 Anche qui ne riporto solo alcune, le altre si trovano nel percorso "results/visual_models/xai"
 
 #### SHAP
 
-![encoders](results/visual_models/shap/task_00_FN.png)
-![encoders](results/visual_models/shap/task_09_TN.png)
-![encoders](results/visual_models/shap/task_13_FN.png)
-![encoders](results/visual_models/shap/task_14_TP.png)
+![encoders](results/visual_models/xai/shap/task_00_FN.png)
+![encoders](results/visual_models/xai/shap/task_09_TN.png)
+![encoders](results/visual_models/xai/shap/task_13_FN.png)
+![encoders](results/visual_models/xai/shap/task_14_TP.png)
 
 Sugli stessi esempi considerati per Vanilla Gradient e GradCAM, riportiamo infine le mappe ottenute con SHAP che, rispetto alle due tecniche precedenti, risulta particolarmente interessante perché la mappa non mostra solamente quali regioni siano rilevanti, ma anche la direzione del contributo alla predizione: le aree con valori positivi e negativi permettono infatti di distinguere tra caratteristiche che spingono l'output verso una classe e caratteristiche che lo contrastano; questo è possibile grazie all'utilizzo del GradientExplainer, il cui funzionamento si basa sui gradienti del modello rispetto agli input e sull'integrazione di tali gradienti rispetto a una distribuzione di riferimento (background), ottenendo così un'approssimazione dei valori SHAP per modelli differenziabili.
 
@@ -1004,7 +1011,7 @@ Per quello che riguarda il task 14, le due famiglie di metodi Gradient (Vanilla 
 
 ## Notebook 4 - Concept Bottleneck Model
 
-In quest'ultimo notebook introduciamo un modello neurosimbolico il cui nome è Concept Bottleneck Model (CBM), nel nostro caso il modello sarà composto da una ResNet-18, il cui compito è quello di estrarre le feature visive dagli esempi di KANDY, utilizzare poi un concept layer per predirre i concetti semantici contenuti in essi e, come classicatore finale, costruiremo due varianti:
+In quest'ultimo notebook introduciamo un modello neurosimbolico il cui nome è Concept Bottleneck Model (CBM), nel nostro caso il modello sarà composto da una ResNet-18, il cui compito è quello di estrarre le feature visive dagli esempi di KANDY, utilizzare poi un concept layer per predire i concetti semantici contenuti in essi e, come classificatore finale, costruiremo due varianti:
 
 - nella prima il classificatore sarà costituito da un layer lineare
 - nella seconda il classificatore sarà costituito da un piccolo MLP
@@ -1540,11 +1547,11 @@ A livello locale, per task, l'analisi mostra invece che l'importanza dei concett
 
 Nel complesso, il bottleneck concettuale viene quindi effettivamente utilizzato dalla task head, ma la predizione appare distribuita su più concetti. L'importanza dei singoli concetti non è inoltre sempre perfettamente allineata alla struttura attesa dei task e, in alcuni casi, l'intervento su un concetto può persino migliorare lo score del task.
 
-Successivamente valuto l'importanza dei singoli concetti sulla predizione finale della task head: calcolo la macro-F1 di riferimento utilizzando i concetti predetti dal modello, poi per ogni concetto, lo imposto a zero per tutti gli esempi e ricalcolo la macro-F1, così da misurare quanto la sua rimozione modifica la performance del modello. Infine, ordino i concetti in base alla variazione di macro-F1 e li rimuovo progressivamente, uno alla volta, per osservare come cambia la performance complessiva al crescere del numero di concetti rimossi.
+Successivamente valuto l'importanza dei singoli concetti sulla predizione finale della task head: calcolo la macro-F1 di riferimento utilizzando i concetti predetti dal modello, poi per ogni concetto lo sostituisco con un valore campionato dalla distribuzione osservata nel training set e ricalcolo la macro-F1, così da misurare quanto la sua sostituzione modifica la performance del modello. Infine, ordino i concetti in base alla variazione di macro-F1 e li sostituisco progressivamente, uno alla volta. Per valutare quanto il ranking ottenuto sia realmente informativo, confronto questa curva con una seconda curva ottenuta utilizzando un ordine casuale dei concetti.
 
 ![ablation](results/neuro_symbolic_concept_cbm/plots/cumulative_linear.png)
 
-Notiamo che la diminuzione è evidente nelle prime fasi, indicando che i concetti classificati come più importanti contribuiscono in modo significativo alla decisione della task head; proseguendo poi con la rimozione la performance continua a calare anche se ci sono alcune oscillazioni, questo può essere dovuto a dipendenze tra le variabili rimosse e alla soglia utilizzata per decidere se la predizione è 0 o 1.
+Si osserva che la curva ottenuta utilizzando l'Explain ranking diminuisce più rapidamente rispetto a quella ottenuta con il Random ranking, soprattutto nelle prime fasi. Questo indica che i concetti considerati più importanti dall'analisi hanno effettivamente un maggiore impatto sulla performance della task head rispetto a concetti scelti casualmente. Proseguendo con la sostituzione, le due curve tendono progressivamente ad avvicinarsi e sono presenti alcune oscillazioni, dovute all'effetto combinato dei concetti e alla soglia utilizzata per ottenere le predizioni binarie.
 
 #### Robustezza & Concetti Rumorosi
 
@@ -1769,11 +1776,11 @@ Rimangono comunque alcune difficoltà sui concetti più composizionali, come tri
 
 </details>
 
-Rispetto alla testa lineare, nella MLP l'intervento sui concetti produce variazioni generalmente più ampie: il MLP sembra quindi sfruttare maggiormente i concetti nella costruzione della predizione, con effetti più marcati quando alcuni di essi vengono alterati. Anche l'importanza dei concetti cambia: con la testa lineare l'influenza era più distribuita e spesso legata a concetti generali, mentre nella MLP emergono maggiormente alcuni concetti direttamente collegati al contenuto del task: ciò è evidente nel task 19 dove traffic_light_color_order, che nella testa lineare aveva un effetto quasi nullo, assume molta più importanza.
+Rispetto alla testa lineare, nel MLP l'intervento sui concetti produce variazioni generalmente più ampie: il MLP sembra quindi sfruttare maggiormente i concetti nella costruzione della predizione, con effetti più marcati quando alcuni di essi vengono alterati. Anche l'importanza dei concetti cambia: con la testa lineare l'influenza era più distribuita e spesso legata a concetti generali, mentre nella MLP emergono maggiormente alcuni concetti direttamente collegati al contenuto del task: ciò è evidente nel task 19 dove traffic_light_color_order, che nella testa lineare aveva un effetto quasi nullo, assume molta più importanza.
 
 ![ablation](results/neuro_symbolic_concept_cbm/plots/cumulative_mlp.png)
 
-Rispetto alla testa lineare, nella MLP la curva mostra un calo più ripido: già la rimozione dei primi concetti più importanti porta a una diminuzione marcata della macro-F1. Dopo alcune oscillazioni, la performance continua a ridursi e, quando vengono rimossi molti concetti, il calo diventa ancora più evidente, indicando che la MLP sfrutta in modo significativo le combinazioni tra le informazioni presenti nel bottleneck.
+Rispetto alla testa lineare, la MLP presenta valori di Macro-F1 iniziali più elevati e mantiene una performance superiore per gran parte della rimozione. Anche nel caso dell’Explain ranking, la diminuzione della performance è più graduale nella MLP rispetto al modello lineare: mentre la testa lineare scende rapidamente già nelle prime sostituzioni, la MLP conserva valori di Macro-F1 più elevati. Una differenza analoga si osserva considerando il Random ranking, per il quale la MLP mantiene un vantaggio rispetto alla testa lineare soprattutto nelle fasi iniziali e intermedie. All’aumentare del numero di concetti sostituiti, le prestazioni dei due modelli convergono progressivamente, fino a raggiungere valori molto simili nelle fasi finali.
 
 #### Robustezza & Concetti Rumorosi
 
@@ -1839,3 +1846,5 @@ L'introduzione di una testa MLP permette di recuperare una parte significativa d
 Nel complesso, i risultati mostrano quindi che interpretabilità e performance non devono necessariamente essere considerate come obiettivi incompatibili: il passaggio da una classificazione puramente visuale a una rappresentazione intermedia basata su concetti introduce effettivamente un costo dal punto di vista delle prestazioni, tuttavia una progettazione adeguata del bottleneck e della testa di classificazione permette di ridurre tale costo mantenendo al tempo stesso una rappresentazione molto più leggibile e analizzabile.
 
 Il principale risultato del lavoro non è quindi l'individuazione di un singolo modello ottimale, ma l'evidenza che la scelta della rappresentazione intermedia è fondamentale. Nel caso di KANDY-Easy, le proprietà percettive sono sufficienti per molti task, mentre i problemi più difficili richiedono una rappresentazione esplicita delle relazioni e delle strutture composizionali. Un possibile sviluppo futuro consiste quindi nel migliorare il vocabolario dei concetti, riducendone le ridondanze e introducendo rappresentazioni relazionali più espressive, per poi verificare se gli stessi risultati possano essere mantenuti anche sulla variante KANDY-Hard.
+
+Per il prototipo: [agent/README.md](agent/README.md)
