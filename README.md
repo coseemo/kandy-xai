@@ -51,7 +51,6 @@ All'interno della repository si trovano le seguenti cartelle:
 ### Fonti Utilizzate
 
 - [The KANDY benchmark](https://link.springer.com/article/10.1007/s10994-025-06798-x)
-- 
 - Note del Corso di Explainable Artificial Intelligence
 
 #### Large Language Models 
@@ -464,37 +463,37 @@ Nel complesso, quindi, le feature relazionali sembrano essere utili soprattutto 
 
 #### Task 0
 
-![interp](results/interpretable_models/task_0_selected_logistic.png)
+![interp](results/interpretable_models/plots/task_0_selected_logistic.png)
 
 Nel task 0 la feature più importante è count_shape_triangle, che presenta un coefficiente fortemente positivo. Coerentemente con la richiesta del task quindi, la presenza di triangoli è l'elemento principale utilizzato per riconoscere la classe positiva e, al contrario, count_shape_circle e count_shape_square hanno coefficienti fortemente negativi, indicando che la presenza di forme diverse è associata alla classe negativa. Le informazioni spaziali, come mean_x_triangle e mean_y_square, hanno invece un contributo più contenuto. Il modello si basa quindi soprattutto sulle forme.
 
 #### Task 2
 
-![interp](results/interpretable_models/task_2_selected_logistic.png)
+![interp](results/interpretable_models/plots/task_2_selected_logistic.png)
 
 Anche nel task 2 la forma è l'informazione principale: count_shape_circle ha il coefficiente positivo più elevato, mentre count_shape_triangle è fortemente negativo. È interessante anche il contributo positivo di count_color_cyan e count_size_small, che forniscono informazione aggiuntiva senza essere strettamenti legate alla richiesta del task. Le feature count_shape_square, count_size_large e mean_y_circle contribuiscono invece negativamente. Il modello sembra quindi riconoscere soprattutto la presenza dei cerchi, utilizzando le altre caratteristiche per distinguere meglio le due classi.
 
 #### Task 9
 
-![interp](results/interpretable_models/task_9_selected_logistic.png)
+![interp](results/interpretable_models/plots/task_9_selected_logistic.png)
 
 Nel task 9 il contributo maggiore è dato da count_color_red, seguito da mean_x_triangle e count_shape_triangle. La presenza di un triangolo rosso e, soprattutto, una maggiore coordinata x del triangolo sono quindi fortemente associate alla classe positiva come ci si aspetterebbe. È interessante anche pair_same_color, che presenta un coefficiente negativo: in questo caso il fatto che esistano coppie con lo stesso colore sembra essere associato maggiormente alla classe negativa. Il modello sembra quindi riuscire a combinare colore, forma, posizione e relazioni tra oggetti.
 
 #### Task 12 
 
-![interp](results/interpretable_models/task_12_selected_tree.png)
+![interp](results/interpretable_models/plots/task_12_selected_tree.png)
 
 Nel task 12 il Decision Tree utilizza innanzitutto count_color per separare le immagini senza oggetti del colore richiesto da quelle che ne contengono. Nel ramo positivo, count_color_blue diventa particolarmente importante: valori superiori a 0.5 portano verso la classificazione positiva. Successivamente vengono utilizzate std_x_all e mean_x_circle per distinguere ulteriormente i casi. L'albero mostra quindi una struttura gerarchica in cui prima vengono considerate le informazioni sul colore e successivamente alcune caratteristiche relative alle posizioni degli oggetti.
 
 #### Task 14
 
-![interp](results/interpretable_models/task_14_selected_tree.png)
+![interp](results/interpretable_models/plots/task_14_selected_tree.png)
 
 Nel task 14 la prima suddivisione avviene sulla posizione media dei cerchi (mean_x_circle), mostrando che la posizione degli oggetti è importante per questo task. Nei rami successivi compaiono pair_same_shape, count_shape_circle, mean_x_triangle e std_y_all. In particolare, pair_same_shape permette di separare alcuni casi positivi, mentre le feature spaziali vengono utilizzate per raffinare ulteriormente la decisione. 
 
 #### Task 16
 
-![interp](results/interpretable_models/task_16_selected_tree.png)
+![interp](results/interpretable_models/plots/task_16_selected_tree.png)
 
 Il task 16 è interessante perché la prima suddivisione del tree avviene direttamente su pair_same_color. Quando questa relazione è presente, il ramo porta direttamente alla classe negativa; quando invece non è presente, il modello considera pair_same_size e successivamente count_shape_circle e mean_x_all. Questo mostra che per il riconoscimento della "car" le relazioni tra gli oggetti hanno un ruolo centrale: il modello utilizza infatti già alla radice una feature relazionale, per poi combinare informazioni su forma e posizione.
  
@@ -564,10 +563,10 @@ Dal punto di vista interpretativo, riportiamo sotto alcune curve dell'EBM relati
 <details>
 <summary><strong>Task 12: red traingle on the right and at least one blue object and arbitrary objects</strong></summary>
 
-![ebm](results/interpretable_models/task_12_ebm_count_color_red.png)
-![ebm](results/interpretable_models/task_12_ebm_count_shape_triangle.png)
-![ebm](results/interpretable_models/task_12_ebm_count_color_blue.png)
-![ebm](results/interpretable_models/task_12_ebm_mean_x_triangle.png)
+![ebm](results/interpretable_models/plots/task_12_ebm_count_color_red.png)
+![ebm](results/interpretable_models/plots/task_12_ebm_count_shape_triangle.png)
+![ebm](results/interpretable_models/plots/task_12_ebm_count_color_blue.png)
+![ebm](results/interpretable_models/plots/task_12_ebm_mean_x_triangle.png)
 
 Interessante notare come, in questo task, la presenza del colore rosso sembri avere un contributo maggiore alla decisione rispetto alla presenza del triangolo.
 
